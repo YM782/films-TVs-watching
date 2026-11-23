@@ -52,7 +52,7 @@
 
     const sort = $("#sortSelect").value;
     const sorters = {
-      douban: (a, b) => b.ratings.douban - a.ratings.douban,
+      douban: (a, b) => (b.ratings.douban ?? -1) - (a.ratings.douban ?? -1),
       imdb: (a, b) => b.ratings.imdb - a.ratings.imdb,
       tomato: (a, b) => b.ratings.tomato - a.ratings.tomato,
       year: (a, b) => b.year - a.year,
@@ -83,9 +83,9 @@
             <div class="rating-row">
               ${ratingChip("RT 影評人", movie.ratings.tomato + "%", "tomato")}
               ${ratingChip("IMDb", movie.ratings.imdb.toFixed(1), "imdb", "/10")}
-              ${ratingChip("豆瓣", movie.ratings.douban.toFixed(1), "douban", "/10")}
+              ${ratingChip("豆瓣", movie.ratings.douban == null ? "—" : movie.ratings.douban.toFixed(1), "douban", movie.ratings.douban == null ? "" : "/10")}
             </div>
-            <div class="card-footer"><span>三站評分對照</span><span class="detail-link">查看詳情 →</span></div>
+            <div class="card-footer"><span>${movie.ratings.douban == null ? "豆瓣分數待核實" : "三站評分對照"}</span><span class="detail-link">查看詳情 →</span></div>
           </div>
         </article>`;
     }).join("");
@@ -115,9 +115,9 @@
           <p class="detail-meta">${escapeHtml(movie.country)}　·　${escapeHtml(movie.runtime)}<br>導演：${escapeHtml(movie.director)}<br>類型：${escapeHtml(movie.genres.join("、"))}</p>
           <p class="detail-overview">${escapeHtml(movie.summary)}</p>
           <div class="detail-ratings">
-            <div class="detail-rating"><small>🍅 RT 影評人</small><b style="color:#ff9581">${movie.ratings.tomato}%</b><a href="${escapeHtml(movie.links.tomato)}" target="_blank" rel="noopener">查看烂番茄 ↗</a></div>
+            <div class="detail-rating"><small>🍅 RT 影評人</small><b style="color:#ff9581">${movie.ratings.tomato}%</b><small class="secondary-score">觀眾 Popcornmeter ${movie.ratings.popcorn}%</small><a href="${escapeHtml(movie.links.tomato)}" target="_blank" rel="noopener">查看爛番茄 ↗</a></div>
             <div class="detail-rating"><small>IMDb 全球觀眾</small><b style="color:#f2ca78">${movie.ratings.imdb.toFixed(1)}<span style="font-size:10px;color:#8794a8"> /10</span></b><a href="${escapeHtml(movie.links.imdb)}" target="_blank" rel="noopener">查看 IMDb ↗</a></div>
-            <div class="detail-rating"><small>豆瓣觀眾</small><b style="color:#8ed5ad">${movie.ratings.douban.toFixed(1)}<span style="font-size:10px;color:#8794a8"> /10</span></b><a href="${escapeHtml(movie.links.douban)}" target="_blank" rel="noopener">查看豆瓣 ↗</a></div>
+            <div class="detail-rating"><small>豆瓣觀眾</small><b style="color:#8ed5ad">${movie.ratings.douban == null ? "—" : movie.ratings.douban.toFixed(1)}<span style="font-size:10px;color:#8794a8">${movie.ratings.douban == null ? "" : " /10"}</span></b>${movie.links.douban ? `<a href="${escapeHtml(movie.links.douban)}" target="_blank" rel="noopener">查看豆瓣 ↗</a>` : `<small class="secondary-score">尚未核實豆瓣評分</small>`}</div>
           </div>
           <div class="detail-actions">
             <button class="save-detail" type="button" data-save="${escapeHtml(movie.id)}">${saved ? "★ 已加入我的片單" : "☆ 加入我的片單"}</button>
