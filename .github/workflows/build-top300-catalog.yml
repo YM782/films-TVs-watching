@@ -43,5 +43,6 @@ jobs:
             echo "Top 300 catalog is unchanged."
           else
             git commit -m "Refresh Top 300 movie and TV catalog"
+            git pull --rebase origin main
             git push
           fi
