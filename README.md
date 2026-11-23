@@ -91,6 +91,41 @@
 - 海報由外部來源載入，本站不擁有海報著作權。圖片可能因來源站調整、外連限制或版權要求而失效；公開或商業用途前，請取得權利人授權或改用獲授權素材。
 - 本站為個人影視整理工具，與 Rotten Tomatoes、IMDb、豆瓣及海報權利人均無隸屬或官方合作關係。
 
+
+## IMDb 榜單真實海報補全（TMDb）
+
+排行榜頁面使用 IMDb ID 對照 TMDb 海報資料，海報圖片由 TMDb CDN 提供：
+`https://image.tmdb.org/t/p/w500/{poster_path}`。TMDb 的圖片 URL 組成方式見 [官方 Image Basics](https://developer.themoviedb.org/docs/image-basics)。
+
+### 一次性設定 API 金鑰
+
+請勿把 TMDb Token 寫入 HTML、JavaScript 或公開 JSON，也不要貼在聊天訊息或公開 Issue。
+
+1. 登入 [TMDb](https://www.themoviedb.org/)，到帳戶設定中的 API 頁面申請 API Read Access Token。
+2. 打開本 GitHub 倉庫的 **Settings → Secrets and variables → Actions**。
+3. 點擊 **New repository secret**。
+4. Name 填入 `TMDB_READ_ACCESS_TOKEN`，Secret 貼上 TMDb 的 API Read Access Token，然後儲存。
+5. 打開倉庫 **Actions → Refresh ranking posters → Run workflow**。
+6. 工作流程會從 IMDb 電影及電視榜各取前 100 部，先按 IMDb ID 呼叫 TMDb `/find/{external_id}?external_source=imdb_id`；無法配對時才按片名及年份搜尋。
+7. 配對結果寫入 `data/ranking-posters.json`，只保存公開海報路徑、TMDb ID、媒體類型和配對資訊；Token 只存在 GitHub Actions Secret。
+8. 成功後重新整理 [排行榜專刊](https://ym782.github.io/films-TVs-watching/rankings.html)。工作流程另設每週自動更新。
+
+### 海報配對與備援
+
+- 前端按 IMDb ID 讀取海報清單，不再依賴片名碰巧相同。
+- 已有的 `data/movies.json` 海報仍作為備援來源。
+- 圖片載入失敗時會回退至文字封面，避免出現破圖圖示。
+- 榜單會顯示已配對的海報數量；未配對的作品列在 manifest 的 `unmatched` 欄位，方便人工檢查。
+- TMDb API Token 不會出現在公開網頁；海報圖片 URL 本身是公開 CDN 資源。
+
+### TMDb 署名與使用條款
+
+本專案已在排行榜專刊加入 TMDb 標誌及以下聲明：
+
+> This product uses the TMDB API but is not endorsed or certified by TMDB.
+
+TMDb 官方要求使用其核准標誌並在應用程式中提供上述聲明。非商業用途可依其規定免費使用 API 並註明來源；商業用途請先向 TMDb 確認授權。詳見 [TMDb FAQ](https://developer.themoviedb.org/docs/faq) 及 [Logos & Attribution](https://www.themoviedb.org/about/logos-attribution)。
+
 ## 個人收藏的儲存方式
 
 收藏清單只存在目前瀏覽器的 localStorage。清除瀏覽器網站資料、換裝置或換瀏覽器時不會自動同步。可使用頁面右上角「匯出片單」保存 JSON 備份。
