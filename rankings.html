@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090d16">
-  <meta name="description" content="CineScope Journal 榜單專刊：IMDb 電影與劇集 Top 100 即時索引，並整理 Rotten Tomatoes 與豆瓣官方榜單入口。">
+  <meta name="description" content="CineScope Journal 榜單專刊：300 部電影、300 部電視劇，含 IMDb 評分、投票數及海報索引。">
   <title>榜單專刊｜CineScope Journal</title>
-  <link rel="preconnect" href="https://image.tmdb.org">
+  <link rel="preconnect" href="https://images.metahub.space">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/rankings.css">
   <script defer src="./assets/js/rankings.js"></script>
@@ -36,11 +36,11 @@
     <section class="rankings-intro">
       <p class="eyebrow">THE RANKING ISSUE</p>
       <h1>把好作品，<em>排成一冊。</em></h1>
-      <p>電影與劇集分開整理，保留每個平台自己的排名方法。IMDb 榜單會從公開榜單代理服務載入最新快照；Rotten Tomatoes 與豆瓣則保留原始榜單入口，不混造不存在的統一名次。</p>
+      <p>電影與劇集各 300 部。前 250 名沿用 IMDb 榜單；額外 50 名以 IMDb 公開評分及投票數作延伸排序，並清楚標示方法，不冒充官方 Top 300。Rotten Tomatoes 與豆瓣保留原始榜單入口。</p>
       <div class="ranking-metrics">
-        <div><strong id="imdbMovieCount">—</strong><span>IMDb 電影榜</span></div>
+        <div><strong id="imdbMovieCount">—</strong><span>電影 Top 300</span></div>
         <i></i>
-        <div><strong id="imdbTvCount">—</strong><span>IMDb 劇集榜</span></div>
+        <div><strong id="imdbTvCount">—</strong><span>劇集 Top 300</span></div>
         <i></i>
         <div><strong id="savedCount">0</strong><span>本頁收藏</span></div>
       </div>
@@ -67,7 +67,7 @@
 
     <section class="live-rankings" id="imdb-rankings">
       <div class="live-heading">
-        <div><p class="eyebrow">LIVE CHART SNAPSHOT · IMDb</p><h2>IMDb 海報榜單</h2><p class="live-description">載入 IMDb Top 250 的前 100 名。排名、分數與投票數來自榜單資料；海報若能與你的現有片庫匹配，就會顯示原片庫海報，否則使用雜誌式文字封面。</p></div>
+        <div><p class="eyebrow">LIVE CHART SNAPSHOT · IMDb</p><h2>IMDb 海報榜單</h2><p class="live-description">收錄 300 部電影及 300 部電視劇。前 250 名沿用 IMDb 榜單，後 50 名為以 IMDb 公開資料計算的延伸排名。海報按 IMDb ID 自動載入，缺圖時會顯示備用封面。</p></div>
         <div class="open-imdb-group"><a class="open-imdb" href="https://www.imdb.com/chart/top/" target="_blank" rel="noopener noreferrer">IMDb 電影 Top 250 ↗</a><a class="open-imdb" href="https://www.imdb.com/chart/toptv/" target="_blank" rel="noopener noreferrer">IMDb 劇集 Top 250 ↗</a></div>
       </div>
 
@@ -94,17 +94,7 @@
         <div><b>Rotten Tomatoes</b><p>Tomatometer 是影評人正面評價比例；不同編輯榜還可能加入觀眾分數、評論量和編輯調整。</p></div>
         <div><b>豆瓣</b><p>電影 Top 250 會綜合用戶評價與評價人數；劇集榜則依頁面提供的類型、地區等分類瀏覽。</p></div>
       </div>
-      <p class="data-note">IMDb 榜單透過第三方開源代理讀取 IMDb 公開榜單（<a href="https://github.com/mmdju/imdb-top250-api" target="_blank" rel="noopener noreferrer">代理專案原始碼 ↗</a>），代理服務可能有快取或短暫中斷；請以 IMDb 官方頁面為最終依據。代理只提供排名、片名、年份、評分、投票數及作品連結。海報路徑由 TMDb API 按 IMDb ID 配對；海報 CDN 使用 w500 尺寸，圖片失效時會回退至文字封面。</p>
-      <div class="tmdb-credit" id="credits">
-        <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer" aria-label="The Movie Database">
-          <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="TMDB logo" loading="lazy">
-        </a>
-        <div>
-          <strong>海報與影視資料來源：TMDB</strong>
-          <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
-          <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank" rel="noopener noreferrer">TMDB 官方標誌及署名規範 ↗</a>
-        </div>
-      </div>
+      <p class="data-note">IMDb 前 250 名透過第三方開源代理讀取公開榜單（<a href="https://github.com/mmdju/imdb-top250-api" target="_blank" rel="noopener noreferrer">代理專案原始碼 ↗</a>）；第 251–300 名由 CineScope 根據 IMDb 官方非商業資料集中的評分及投票數計算，並非 IMDb 官方 Top 300。海報按 IMDb ID 從 <a href="https://images.metahub.space/" target="_blank" rel="noopener noreferrer">MetaHub 圖片 CDN</a> 載入；圖片可能缺失或失效，網站會自動回退至文字封面。本站不擁有海報圖片權利。</p>
     </section>
   </main>
 
