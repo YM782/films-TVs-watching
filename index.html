@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="CineScope 全球影視收藏館：一次比較 Rotten Tomatoes、IMDb、豆瓣電影評分，收藏想看的電影與影集。">
+  <title>CineScope｜全球影視收藏館</title>
+  <link rel="preconnect" href="https://images.fandango.com">
+  <link rel="preconnect" href="https://image.tmdb.org">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script defer src="./assets/js/app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="CineScope 首頁">
+      <span class="brand-mark">C</span><span>CINE<span class="brand-light">SCOPE</span></span>
+    </a>
+    <nav class="main-nav" aria-label="主導覽">
+      <a class="nav-link active" href="#discover">探索</a>
+      <a class="nav-link" href="#ratings">三站評分</a>
+      <button class="nav-link" id="watchlistNav" type="button">我的片單 <span class="nav-count" id="watchCount">0</span></button>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-button" id="themeInfo" type="button" aria-label="網站說明" title="網站說明">ⓘ</button>
+      <button class="profile-chip" id="exportBtn" type="button"><span class="profile-dot"></span> 匯出片單</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR PERSONAL CINEMA</p>
+        <h1>好電影，<em>值得</em><br>被好好收藏。</h1>
+        <p class="hero-sub">把全球影評、觀眾口碑與你的觀影清單，放進同一個電影宇宙。</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#catalog">開始探索 <span>↘</span></a>
+          <button class="text-btn" id="showWatchlist" type="button">查看我的片單 <span>→</span></button>
+        </div>
+        <div class="hero-meta">
+          <div><strong id="movieTotal">07</strong><span>精選電影</span></div>
+          <i></i>
+          <div><strong>03</strong><span>評分來源</span></div>
+          <i></i>
+          <div><strong>∞</strong><span>持續收藏</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="電影海報拼貼裝飾">
+        <div class="hero-orbit"></div>
+        <div class="hero-poster hero-poster-back"><img src="https://filmartgallery.com/cdn/shop/files/The-Dark-Knight-Vintage-Movie-Poster-Original_96d3cfa1_5000x.jpg?v=1773198168" alt="" loading="lazy"></div>
+        <div class="hero-poster hero-poster-mid"><img src="https://cdn.mos.cms.futurecdn.net/xFQ8L37EP3ARaoFg8cQYCD.jpg" alt="" loading="lazy"></div>
+        <div class="hero-poster hero-poster-front"><img src="https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219062/Parasite2019.jpg" alt="" loading="lazy"></div>
+        <div class="hero-stamp"><span>FILM</span><b>∞</b><span>FOREVER</span></div>
+      </div>
+    </section>
+
+    <section class="platform-strip" id="ratings" aria-label="評分平台">
+      <div class="platform-intro"><span class="live-dot"></span> THREE VOICES, ONE MOVIE</div>
+      <div class="platform-item"><span class="platform-symbol rt-symbol">🍅</span><span><b>Rotten Tomatoes</b><small>影評人新鮮度・觀眾爆米花指數</small></span></div>
+      <div class="platform-item"><span class="platform-symbol imdb-symbol">IMDb</span><span><b>IMDb</b><small>全球觀眾評分</small></span></div>
+      <div class="platform-item"><span class="platform-symbol douban-symbol">豆</span><span><b>豆瓣電影</b><small>華語觀眾評分</small></span></div>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>電影收藏 <span>／</span> MOVIES</h2></div>
+        <p class="section-note">三個平台，各自代表不同的觀影聲音。</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="搜尋片名、導演或類型…" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="toolbar-right">
+          <select id="sortSelect" aria-label="排序方式">
+            <option value="featured">精選排序</option>
+            <option value="douban">豆瓣高分</option>
+            <option value="imdb">IMDb 高分</option>
+            <option value="tomato">烂番茄影評人高分</option>
+            <option value="year">上映年份（新到舊）</option>
+          </select>
+          <button class="filter-toggle" id="watchOnlyBtn" type="button">♡ 只看收藏</button>
+        </div>
+      </div>
+      <div class="genre-row" id="genreFilters">
+        <button class="genre-pill selected" data-genre="all">全部作品 <span>07</span></button>
+        <button class="genre-pill" data-genre="劇情">劇情</button>
+        <button class="genre-pill" data-genre="科幻">科幻</button>
+        <button class="genre-pill" data-genre="犯罪">犯罪</button>
+        <button class="genre-pill" data-genre="動畫">動畫</button>
+        <button class="genre-pill" data-genre="懸疑">懸疑</button>
+      </div>
+      <div class="result-line"><span id="resultCount">正在載入片單…</span><span class="snapshot-label">評分資料快照：2026.11.23</span></div>
+      <div class="movie-grid" id="movieGrid" aria-live="polite">
+        <div class="loading-card">正在整理你的電影收藏…</div>
+      </div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>沒有找到符合條件的電影</h3><p>試試其他片名或篩選條件。</p><button class="text-btn" id="resetFilters" type="button">清除篩選 →</button></div>
+    </section>
+
+    <section class="rating-guide">
+      <div><p class="eyebrow">HOW TO READ THE SCORES</p><h2>不要只看一個分數。</h2><p>烂番茄的百分比代表正面評價比例；IMDb 與豆瓣則是 10 分制的觀眾平均評分。三者的計算方式和評分群體不同，因此網站會並列呈現，不會把它們硬湊成一個「總分」。</p></div>
+      <div class="guide-cards">
+        <div><b class="guide-tomato">89%</b><strong>Tomatometer</strong><small>專業影評人給出正面評價的比例</small></div>
+        <div><b class="guide-imdb">9.3<span>/10</span></b><strong>IMDb Rating</strong><small>IMDb 全球用戶的加權評分</small></div>
+        <div><b class="guide-douban">9.7<span>/10</span></b><strong>豆瓣評分</strong><small>豆瓣用戶的綜合評分</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="./"><span class="brand-mark">C</span><span>CINE<span class="brand-light">SCOPE</span></span></a>
+    <p>為電影而收藏。A small home for great films.</p>
+    <div class="footer-bottom"><span>© 2026 CineScope · Personal film collection</span><a href="#ratings">評分來源說明 ↑</a></div>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="關閉">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
