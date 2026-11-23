@@ -41,6 +41,7 @@
 - 獨立的雜誌式排行榜頁面，不會把平台不同的排名方法混成一個總分。
 - IMDb 電影與電視榜：各收錄 300 部。前 250 名沿用 IMDb 公開 Top 250 榜單；第 251–300 名是 CineScope 根據 IMDb 官方非商業資料集的評分與投票數計算的延伸排名，並非 IMDb 官方 Top 300。
 - IMDb 榜單資料由 `https://imdb-top250.mmdju.workers.dev` 提供前 250 名；該服務是社群代理，不是 IMDb 官方 API。第 251–300 名由 GitHub Actions 讀取 IMDb 官方非商業資料集後計算。
+- **資料新鮮度：** 第三方代理可能回傳快取或種子快照，不保證每次都是即時榜單。本次生成記錄的電影 Top 250 快照日期為 2026-09-01，劇集 Top 250 為 2026-09-04；頁面會讀取 JSON 中的來源日期並顯示。第 251–300 名使用本次工作流程下載的 IMDb 公開評分資料計算。
 - 海報顯示：優先使用本站已有海報，否則按 IMDb ID 載入 MetaHub 海報 CDN（`images.metahub.space/poster/medium/{imdb_id}/img`）；來源沒有圖片或圖片失效時自動回退至文字封面。
 - 榜單收藏：本頁的收藏使用獨立的瀏覽器 localStorage key（`cinescope-ranking-watchlist-v1`），與首頁個人片庫收藏分開保存。
 - Rotten Tomatoes 原始入口：官方影史電影 300 部榜、官方恐怖劇集 100 部榜。
