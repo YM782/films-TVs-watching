@@ -104,3 +104,16 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,5vw,84px)}.hero{min-heigh
   .ranking-card{min-height:185px}
   .issue-side{font-size:8px}
 }
+
+@media(max-width:700px){
+  .topbar{gap:8px}
+  .main-nav{gap:9px;flex:1;justify-content:center;min-width:0}
+  .nav-link{font-size:9px;white-space:nowrap}
+  .top-actions{gap:4px}
+}
+@media(max-width:420px){
+  .main-nav{gap:6px}
+  .nav-link{font-size:8px}
+  .brand{letter-spacing:.08em}
+  .brand-light{display:none}
+}
