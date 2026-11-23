@@ -77,7 +77,7 @@
     return {
       id: imdbId ? `imdb-${imdbId}` : `imdb-${kind}-${raw.rank}-${normalize(rawTitle)}`,
       imdbId, rank: Number(raw.rank) || 0, title: rawTitle, titleZh,
-      year: raw.year || "", rating: Number.isFinite(Number(raw.rating)) ? Number(raw.rating) : null,
+      year: raw.year || "", rating: raw.rating == null || raw.rating === "" ? null : (Number.isFinite(Number(raw.rating)) ? Number(raw.rating) : null),
       votes: Number(raw.votes) || 0, url: raw.url || (imdbId ? `https://www.imdb.com/title/${imdbId}/` : "https://www.imdb.com/chart/"),
       poster: local?.poster || "", kind, localId: local?.id || ""
     };
