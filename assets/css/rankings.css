@@ -1,0 +1,79 @@
+.rankings-main{max-width:1440px;margin:0 auto;padding:0 clamp(22px,5vw,84px)}
+.rankings-intro{padding:46px 0 38px;border-bottom:1px solid var(--line)}
+.rankings-intro h1{font-family:'Noto Serif TC','Noto Sans TC',serif;font-size:clamp(38px,5vw,64px);font-weight:600;line-height:1.18;letter-spacing:-.06em;margin:0}
+.rankings-intro h1 em{font-family:'Cormorant Garamond',Georgia,serif;color:var(--gold);font-weight:500}
+.rankings-intro>p:not(.eyebrow){max-width:760px;color:#9eabbe;font-size:13px;line-height:1.95;margin:17px 0 0}
+.ranking-metrics{display:flex;align-items:center;gap:24px;margin-top:28px}
+.ranking-metrics div{display:flex;flex-direction:column;gap:2px}
+.ranking-metrics strong{font-family:'Cormorant Garamond',Georgia,serif;font-size:27px;color:#f1d39f;line-height:1.1}
+.ranking-metrics span{font-size:10px;color:#8794a8}
+.ranking-metrics i{width:1px;height:31px;background:var(--line)}
+.source-shelf{padding:40px 0 52px;border-bottom:1px solid var(--line)}
+.source-shelf-heading,.live-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}
+.source-shelf-heading h2,.live-heading h2,.methodology h2{font-family:'Noto Serif TC','Noto Sans TC',serif;font-size:27px;font-weight:600;letter-spacing:-.035em;margin:0}
+.source-shelf-heading .eyebrow,.live-heading .eyebrow{margin-bottom:7px}
+.source-shelf-heading>p{max-width:430px;color:#8795a9;font-size:10px;line-height:1.8;margin:0 0 3px}
+.source-shelf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.source-tile{min-height:190px;padding:17px 17px 14px;border:1px solid var(--line);background:linear-gradient(145deg,#172334,#0c1420);display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.source-tile:hover{transform:translateY(-3px);border-color:#b99b6d88}
+.source-tile-top{font-size:8px;letter-spacing:.14em;font-weight:700;color:#aab6c8}
+.rt-tile .source-tile-top{color:#ff9a87}
+.douban-tile .source-tile-top{color:#91d6ae}
+.source-tile b{font-family:'Cormorant Garamond','Noto Serif TC',serif;font-size:24px;line-height:1.05;margin:22px 0 9px;color:#f2eee6}
+.source-tile small{font-size:9px;color:#8c9bb0;line-height:1.7}
+.source-tile-link{margin-top:auto;padding-top:11px;border-top:1px solid var(--line);font-size:8px;letter-spacing:.13em;color:var(--gold);font-weight:700}
+.source-method-note{font-size:9px;color:#78869b;line-height:1.9;margin:14px 0 0}
+.live-rankings{padding:54px 0 68px;border-bottom:1px solid var(--line)}
+.live-heading{align-items:center}
+.live-heading>div{max-width:760px}
+.live-heading h2{font-size:32px}
+.live-description{font-size:11px;line-height:1.9;color:#94a2b7;margin:11px 0 0}
+.open-imdb{flex:none;border:1px solid #e8bd7766;color:var(--gold);padding:10px 13px;border-radius:4px;font-size:10px}
+.open-imdb:hover{background:#e8bd7718}
+.rank-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:23px 0 14px}
+.rank-search{height:42px;max-width:440px;width:100%;display:flex;align-items:center;gap:10px;padding:0 13px;background:#111a28;border:1px solid var(--line);border-radius:5px;color:#8492a7}
+.rank-search>span{font-size:20px}
+.rank-search input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#edf2fb;font:inherit;font-size:11px}
+.rank-search input::placeholder{color:#718097}
+.rank-filters{display:flex;gap:6px}
+.rank-filter{border:1px solid var(--line);background:#121d2c;color:#9eabbe;border-radius:4px;padding:9px 13px;font-size:10px}
+.rank-filter.active{border-color:#c5a36d;color:#f0d4a4;background:#2b241a}
+.rank-status{font-size:10px;color:#91a0b5;margin:0 0 13px;min-height:16px}
+.rank-poster-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:21px 14px}
+.rank-poster-card{min-width:0}
+.rank-poster-art{aspect-ratio:2/3;position:relative;overflow:hidden;background:radial-gradient(circle at 45% 28%,#45566d,#182334 56%,#0b111c);border:1px solid #ffffff18;box-shadow:0 12px 24px #0005}
+.rank-poster-art:after{content:"";position:absolute;inset:38% 0 0;background:linear-gradient(transparent,#060a12e8);pointer-events:none}
+.rank-poster-art>img{width:100%;height:100%;object-fit:cover;display:block}
+.rank-poster-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;color:#f0e7d7;background:linear-gradient(145deg,#35465d,#131d2b 60%,#080d16)}
+.rank-poster-fallback span{font-size:7px;letter-spacing:.22em;color:#d7b77f;margin-bottom:20px}
+.rank-poster-fallback b{font-family:'Cormorant Garamond','Noto Serif TC',serif;font-size:clamp(18px,2vw,27px);line-height:1.08;font-weight:600;overflow-wrap:anywhere}
+.rank-poster-fallback small{font-size:8px;line-height:1.5;color:#aeb9c9;margin-top:10px}
+.rank-poster-art.has-poster .rank-poster-fallback{display:none}
+.rank-position,.rank-kind{position:absolute;z-index:2;top:9px;background:#080d16d9;border:1px solid #ffffff30;color:#f4e6cc;border-radius:3px;padding:4px 6px;font-size:9px}
+.rank-position{left:9px;font-weight:700}
+.rank-kind{right:9px;font-size:7px;letter-spacing:.12em}
+.rank-save{position:absolute;z-index:3;right:9px;top:39px;width:29px;height:29px;border:1px solid #ffffff55;border-radius:50%;background:#08101bc9;color:#fff;font-size:16px;line-height:1}
+.rank-save.saved{color:#f4d48a;border-color:#f4d48a;background:#342a1d;box-shadow:0 0 13px #e8bd7733;animation:rank-star-pop .22s ease}
+.rank-score{position:absolute;z-index:2;left:11px;bottom:10px;display:flex;align-items:center;gap:7px;color:#f2d08f}
+.rank-score span{font-size:8px;letter-spacing:.12em}
+.rank-score b{font-family:'Cormorant Garamond',Georgia,serif;font-size:23px;line-height:1}
+.rank-poster-info{padding:10px 1px 0}
+.rank-poster-info h3{font-family:'Noto Serif TC','Noto Sans TC',serif;font-size:13px;line-height:1.35;color:#f0f2f6;margin:0;font-weight:600;min-height:35px}
+.rank-poster-info p{font-size:9px;color:#7f8da2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:4px 0 8px}
+.rank-poster-info>div{display:flex;justify-content:space-between;gap:5px;font-size:8px;color:#8795a9}
+.rank-poster-info>a{display:inline-block;color:#c7a66f;font-size:9px;margin-top:8px}
+.rank-loading{grid-column:1/-1;padding:40px 20px;border:1px dashed var(--line);text-align:center;color:#8794a8;font-size:11px}
+.rank-pagination-note{font-size:9px;color:#6f7e93;margin-top:17px}
+.methodology{padding:48px 0 65px}
+.methodology h2{font-size:27px;margin-bottom:20px}
+.methodology-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.methodology-grid>div{padding:18px;border:1px solid var(--line);background:#111a27}
+.methodology-grid b{font-size:12px;color:var(--gold)}
+.methodology-grid p{font-size:10px;line-height:1.85;color:#93a1b5;margin:9px 0 0}
+.data-note{font-size:9px;line-height:1.9;color:#6f7e93;margin-top:17px}
+.rank-toast{position:fixed;z-index:90;left:50%;bottom:24px;transform:translate(-50%,16px);opacity:0;pointer-events:none;background:#e8bd77;color:#17130e;padding:10px 15px;border-radius:5px;font-size:10px;font-weight:700;transition:opacity .2s,transform .2s}
+.rank-toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes rank-star-pop{0%{transform:scale(.86)}65%{transform:scale(1.12)}100%{transform:scale(1)}}
+@media(max-width:1100px){.source-shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.rank-poster-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:800px){.rank-poster-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.source-shelf-heading{display:block}.source-shelf-heading>p{margin-top:8px}.live-heading{align-items:start;display:block}.open-imdb{display:inline-block;margin-top:14px}}
+@media(max-width:600px){.rankings-main{padding:0 17px}.rankings-intro{padding:34px 0 29px}.rankings-intro>p:not(.eyebrow){font-size:11px}.ranking-metrics{gap:14px}.ranking-metrics strong{font-size:22px}.ranking-metrics span{font-size:8px}.source-shelf{padding:32px 0 40px}.source-shelf-grid{gap:8px}.source-tile{min-height:168px;padding:13px}.source-tile b{font-size:20px;margin-top:18px}.source-tile small{font-size:8px}.live-rankings{padding:39px 0 47px}.live-heading h2{font-size:26px}.rank-toolbar{display:block}.rank-search{max-width:none}.rank-filters{margin-top:9px}.rank-filter{flex:1}.rank-poster-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 11px}.rank-poster-info h3{font-size:12px;min-height:31px}.rank-poster-fallback b{font-size:21px}.methodology{padding:37px 0 48px}.methodology-grid{grid-template-columns:1fr;gap:8px}}
