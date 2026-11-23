@@ -41,12 +41,47 @@
   }
 
   function saveWatchlist() {
-    localStorage.setItem(WATCH_KEY, JSON.stringify([...state.watchlist]));
+    try {
+      localStorage.setItem(WATCH_KEY, JSON.stringify([...state.watchlist]));
+    } catch (_) {
+      showToast("瀏覽器未能儲存片單，請檢查網站儲存權限。");
+    }
     updateWatchCount();
   }
 
   function updateWatchCount() {
     $("#watchCount").textContent = state.watchlist.size;
+  }
+
+  // Update only the matching star and detail button. Do not rebuild the poster grid.
+  function syncSaveButtons(id) {
+    const saved = state.watchlist.has(id);
+    document.querySelectorAll("[data-save]").forEach(button => {
+      if (button.dataset.save !== id) return;
+      button.setAttribute("aria-pressed", String(saved));
+      if (button.classList.contains("save-btn")) {
+        button.classList.toggle("saved", saved);
+        button.textContent = saved ? "★" : "☆";
+        button.setAttribute("aria-label", saved ? "取消收藏" : "加入收藏");
+        button.title = saved ? "取消收藏" : "加入收藏";
+      } else if (button.classList.contains("save-detail")) {
+        button.classList.toggle("saved", saved);
+        button.textContent = saved ? "★ 已加入我的片單" : "☆ 加入我的片單";
+      }
+    });
+  }
+
+  // In the watchlist-only view, hide/show the current card in place.
+  function syncWatchOnlyCard(id, saved) {
+    if (!state.watchOnly) return;
+    const card = Array.from(grid.querySelectorAll(".movie-card"))
+      .find(item => item.dataset.id === id);
+    if (card) card.hidden = !saved;
+    const visibleCount = Array.from(grid.querySelectorAll(".movie-card"))
+      .filter(item => !item.hidden).length;
+    $("#resultCount").textContent = `顯示 ${visibleCount} 部作品`;
+    grid.hidden = visibleCount === 0;
+    $("#emptyState").hidden = visibleCount !== 0;
   }
 
   function ratingChip(label, value, kind, suffix = "") {
@@ -97,7 +132,7 @@
             <span class="poster-fallback">${escapeHtml(movie.titleEn)}</span>
             <div class="poster-top">
               <span class="poster-tag">${typeLabel}</span>
-              <button class="save-btn ${saved ? "saved" : ""}" type="button" data-save="${escapeHtml(movie.id)}" aria-label="${saved ? "取消收藏" : "加入收藏"}">${saved ? "★" : "☆"}</button>
+              <button class="save-btn ${saved ? "saved" : ""}" type="button" data-save="${escapeHtml(movie.id)}" aria-label="${saved ? "取消收藏" : "加入收藏"}" aria-pressed="${saved}" title="${saved ? "取消收藏" : "加入收藏"}">${saved ? "★" : "☆"}</button>
             </div>
             <div class="poster-bottom"><span class="year">${movie.year} · ${escapeHtml(movie.country)}</span><span class="watch-mark">VIEW DETAILS ↗</span></div>
           </div>
@@ -161,7 +196,7 @@
             </div>
           </div>
           <div class="detail-actions">
-            <button class="save-detail" type="button" data-save="${escapeHtml(movie.id)}">${saved ? "★ 已加入我的片單" : "☆ 加入我的片單"}</button>
+            <button class="save-detail ${saved ? "saved" : ""}" type="button" data-save="${escapeHtml(movie.id)}" aria-pressed="${saved}">${saved ? "★ 已加入我的片單" : "☆ 加入我的片單"}</button>
             ${sourceLink(movie.posterSource, "海報來源")}
           </div>
         </div>
@@ -180,7 +215,8 @@
   }
 
   function toggleSave(id) {
-    if (state.watchlist.has(id)) {
+    const wasSaved = state.watchlist.has(id);
+    if (wasSaved) {
       state.watchlist.delete(id);
       showToast("已從我的片單移除");
     } else {
@@ -188,8 +224,8 @@
       showToast("已加入我的片單");
     }
     saveWatchlist();
-    render();
-    if (!modal.hidden) openMovie(id);
+    syncSaveButtons(id);
+    syncWatchOnlyCard(id, !wasSaved);
   }
 
   function setWatchOnly(enabled) {
@@ -245,6 +281,7 @@
   grid.addEventListener("click", event => {
     const saveButton = event.target.closest("[data-save]");
     if (saveButton) {
+      event.preventDefault();
       event.stopPropagation();
       toggleSave(saveButton.dataset.save);
       return;
@@ -256,7 +293,11 @@
   modal.addEventListener("click", event => {
     if (event.target === modal) closeModal();
     const saveButton = event.target.closest("[data-save]");
-    if (saveButton) toggleSave(saveButton.dataset.save);
+    if (saveButton) {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleSave(saveButton.dataset.save);
+    }
   });
 
   $("#modalClose").addEventListener("click", closeModal);
