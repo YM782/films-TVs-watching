@@ -146,7 +146,11 @@
       '<div class="rank-loading">沒有符合條件的作品。請清除搜尋或切換類型。</div>';
     $("#rankStatus").textContent = `顯示 ${items.length} 部作品 · 電影 ${state.movie.length}/300 部 · 劇集 ${state.tv.length}/300 部`;
     const generatedAt = state.catalog?.generatedAt ? new Date(state.catalog.generatedAt).toLocaleDateString("zh-HK") : "";
-    $("#rankPaginationNote").textContent = `電影及劇集各 300 部。第 1–250 名沿用 IMDb 榜單；第 251–300 名為 CineScope 按 IMDb 公開評分及投票數計算的延伸排名，並非 IMDb 官方 Top 300。海報按 IMDb ID 從 MetaHub 圖片 CDN 載入，若來源沒有圖片會自動顯示備用封面。${generatedAt ? ` 資料更新：${generatedAt}。` : ""}`;
+    const movieSnapshot = state.catalog?.methodology?.chartMetadata?.movie?.updatedAt
+      ? new Date(state.catalog.methodology.chartMetadata.movie.updatedAt).toLocaleDateString("zh-HK") : "日期未提供";
+    const tvSnapshot = state.catalog?.methodology?.chartMetadata?.tv?.updatedAt
+      ? new Date(state.catalog.methodology.chartMetadata.tv.updatedAt).toLocaleDateString("zh-HK") : "日期未提供";
+    $("#rankPaginationNote").textContent = `電影及劇集各 300 部。第 1–250 名沿用 IMDb 榜單快照（電影：${movieSnapshot}；劇集：${tvSnapshot}）；第 251–300 名為 CineScope 按 IMDb 公開評分及投票數計算的延伸排名，並非 IMDb 官方 Top 300。海報按 IMDb ID 從 MetaHub 圖片 CDN 載入，若來源沒有圖片會自動顯示備用封面。${generatedAt ? ` 本地資料檔生成：${generatedAt}。` : ""}`;
     $("#imdbMovieCount").textContent = state.movie.length ? String(state.movie.length) : "—";
     $("#imdbTvCount").textContent = state.tv.length ? String(state.tv.length) : "—";
     $("#rankPosterGrid").querySelectorAll("img").forEach(img => {
