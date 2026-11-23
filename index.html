@@ -20,6 +20,7 @@
     <nav class="main-nav" aria-label="主導覽">
       <a class="nav-link active" href="#discover">探索</a>
       <a class="nav-link" href="#ratings">三站評分</a>
+      <a class="nav-link" href="#rankings">榜單專刊</a>
       <button class="nav-link" id="watchlistNav" type="button">我的片單 <span class="nav-count" id="watchCount">0</span></button>
     </nav>
     <div class="top-actions">
@@ -29,9 +30,19 @@
   </header>
 
   <main>
+    <section class="issue-masthead" aria-label="CineScope 雜誌刊頭">
+      <div class="issue-topline"><span>THE GLOBAL SCREEN JOURNAL</span><span>VOL. 01 · NOVEMBER 2026</span></div>
+      <div class="issue-title-row">
+        <span class="issue-side">FILM<br>TELEVISION<br>CULTURE</span>
+        <div class="issue-wordmark">CINE<span>SCOPE</span><small>THE COLLECTOR'S EDITION</small></div>
+        <span class="issue-side issue-side-right">INDEPENDENT<br>SCREEN<br>ARCHIVE</span>
+      </div>
+      <div class="issue-bottomline"><span>影視典藏 · 評分對照 · 私人片單</span><span>ISSUE 001 / 2026</span></div>
+    </section>
+
     <section class="hero" id="discover">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR PERSONAL CINEMA</p>
+        <p class="eyebrow"><span class="eyebrow-line"></span> CINESCOPE JOURNAL · COVER STORY</p>
         <h1>好作品，<em>值得</em><br>被好好收藏。</h1>
         <p class="hero-sub">把全球影評、觀眾口碑與你的觀影清單，放進同一個影視宇宙。</p>
         <div class="hero-actions">
@@ -62,9 +73,55 @@
       <div class="platform-item"><span class="platform-symbol douban-symbol">豆</span><span><b>豆瓣電影</b><small>華語觀眾評分</small></span></div>
     </section>
 
+    <section class="ranking-desk" id="rankings">
+      <div class="ranking-heading">
+        <div><p class="eyebrow">THE RANKING ISSUE · 001</p><h2>全球影視榜單專刊</h2></div>
+        <p>三個平台，各有自己的評分方法與榜單規則。這裡保留原站入口，並清楚標示榜單性質，不把不同口徑混成一張假排行榜。</p>
+      </div>
+      <div class="ranking-grid">
+        <a class="ranking-card ranking-rt" href="https://editorial.rottentomatoes.com/guide/best-movies-of-all-time/" target="_blank" rel="noopener noreferrer">
+          <div class="ranking-card-top"><span>01 / FILM ARCHIVE</span><b>🍅 RT</b></div>
+          <h3>300 Best Movies<br>of All Time</h3>
+          <p>爛番茄官方影史電影榜，結合 Tomatometer、Popcornmeter、評論數與編輯調整。</p>
+          <span class="ranking-open">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="ranking-card ranking-rt" href="https://editorial.rottentomatoes.com/guide/100-percent-certified-fresh-tv-seasons/" target="_blank" rel="noopener noreferrer">
+          <div class="ranking-card-top"><span>02 / TELEVISION</span><b>🍅 RT</b></div>
+          <h3>100% Certified<br>Fresh TV Seasons</h3>
+          <p>爛番茄的滿分劇集季專題；這是「單季」評分專題，不等同全劇 Top 100。</p>
+          <span class="ranking-open">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="ranking-card ranking-imdb" href="https://www.imdb.com/chart/top/" target="_blank" rel="noopener noreferrer">
+          <div class="ranking-card-top"><span>03 / FILM ARCHIVE</span><b>IMDb</b></div>
+          <h3>IMDb Top 250<br>Movies</h3>
+          <p>IMDb 常規投票者評分榜；電影榜只收錄院線長片，並有最低投票數門檻。</p>
+          <span class="ranking-open">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="ranking-card ranking-imdb" href="https://www.imdb.com/chart/toptv/" target="_blank" rel="noopener noreferrer">
+          <div class="ranking-card-top"><span>04 / TELEVISION</span><b>IMDb</b></div>
+          <h3>IMDb Top 250<br>TV Shows</h3>
+          <p>IMDb 電視節目及迷你劇用戶評分榜，適合與電影榜分開閱讀。</p>
+          <span class="ranking-open">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="ranking-card ranking-douban" href="https://movie.douban.com/top250" target="_blank" rel="noopener noreferrer">
+          <div class="ranking-card-top"><span>05 / FILM ARCHIVE</span><b>豆瓣</b></div>
+          <h3>豆瓣電影<br>Top 250</h3>
+          <p>華語觀眾常用的電影經典榜單入口；分數與名次會隨評價變化。</p>
+          <span class="ranking-open">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="ranking-card ranking-douban" href="https://movie.douban.com/chart" target="_blank" rel="noopener noreferrer">
+          <div class="ranking-card-top"><span>06 / TELEVISION</span><b>豆瓣</b></div>
+          <h3>豆瓣劇集<br>排行榜</h3>
+          <p>豆瓣劇集榜按類型、地區與熱度等維度瀏覽；並非單一固定的全球歷史 Top 100。</p>
+          <span class="ranking-open">OPEN ORIGINAL LIST ↗</span>
+        </a>
+      </div>
+      <p class="ranking-disclaimer">榜單口徑說明：IMDb 官方提供 Top 250 電影與電視榜；爛番茄有 300 部影史電影榜及按季整理的劇集專題；豆瓣有電影 Top 250 與多維度劇集榜。後續本站會以各平台可核實的原始排名建立海報索引，並標註來源與查閱日期。</p>
+    </section>
+
     <section class="catalog-section" id="catalog">
       <div class="section-heading">
-        <div><p class="eyebrow">THE COLLECTION</p><h2>影視收藏 <span>／</span> FILMS &amp; SERIES</h2></div>
+        <div><p class="eyebrow">THE SCREEN ARCHIVE</p><h2>影視收藏 <span>／</span> FILMS &amp; SERIES</h2></div>
         <p class="section-note">電影與劇集都在這裡；先選作品類型，再按題材縮小範圍。</p>
       </div>
       <div class="toolbar">
