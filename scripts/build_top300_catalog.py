@@ -85,8 +85,8 @@ def imdb_id(item: dict) -> str:
 def normalize_chart_row(row: dict, kind: str, index: int) -> dict:
     title = str(row.get("title") or row.get("name") or "").strip()
     identifier = imdb_id(row)
-    if not title or not identifier:
-        raise RuntimeError(f"IMDb chart row {index} is missing a title or IMDb ID: {row}")
+    if not title:
+        raise RuntimeError(f"IMDb chart row {index} is missing a title: {row}")
     return {
         "rank": int(row.get("rank") or index),
         "id": identifier,
@@ -94,7 +94,7 @@ def normalize_chart_row(row: dict, kind: str, index: int) -> dict:
         "year": str(row.get("year") or ""),
         "rating": float(row["rating"]) if row.get("rating") not in (None, "") else None,
         "votes": int(row.get("votes") or 0),
-        "url": f"https://www.imdb.com/title/{identifier}/",
+        "url": f"https://www.imdb.com/title/{identifier}/" if identifier else "",
         "rankSource": "IMDb Top 250",
         "kind": kind,
     }
