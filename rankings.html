@@ -94,7 +94,17 @@
         <div><b>Rotten Tomatoes</b><p>Tomatometer 是影評人正面評價比例；不同編輯榜還可能加入觀眾分數、評論量和編輯調整。</p></div>
         <div><b>豆瓣</b><p>電影 Top 250 會綜合用戶評價與評價人數；劇集榜則依頁面提供的類型、地區等分類瀏覽。</p></div>
       </div>
-      <p class="data-note">IMDb 榜單透過第三方開源代理讀取 IMDb 公開榜單（<a href="https://github.com/mmdju/imdb-top250-api" target="_blank" rel="noopener noreferrer">代理專案原始碼 ↗</a>），代理服務可能有快取或短暫中斷；請以 IMDb 官方頁面為最終依據。代理只提供排名、片名、年份、評分、投票數及作品連結，不提供海報圖片。</p>
+      <p class="data-note">IMDb 榜單透過第三方開源代理讀取 IMDb 公開榜單（<a href="https://github.com/mmdju/imdb-top250-api" target="_blank" rel="noopener noreferrer">代理專案原始碼 ↗</a>），代理服務可能有快取或短暫中斷；請以 IMDb 官方頁面為最終依據。代理只提供排名、片名、年份、評分、投票數及作品連結。海報路徑由 TMDb API 按 IMDb ID 配對；海報 CDN 使用 w500 尺寸，圖片失效時會回退至文字封面。</p>
+      <div class="tmdb-credit" id="credits">
+        <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer" aria-label="The Movie Database">
+          <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="TMDB logo" loading="lazy">
+        </a>
+        <div>
+          <strong>海報與影視資料來源：TMDB</strong>
+          <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+          <a href="https://www.themoviedb.org/about/logos-attribution" target="_blank" rel="noopener noreferrer">TMDB 官方標誌及署名規範 ↗</a>
+        </div>
+      </div>
     </section>
   </main>
 
