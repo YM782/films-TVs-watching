@@ -135,9 +135,18 @@ def load_eligible_ratings() -> dict[str, tuple[float, int]]:
     return ratings
 
 
+def title_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (value or "").casefold())
+
+
 def build_extension(kind: str, official_rows: list[dict], ratings: dict[str, tuple[float, int]]) -> list[dict]:
-    official_ids = {item["id"] for item in official_rows}
+    official_ids = {item["id"] for item in official_rows if item.get("id")}
     title_types = {"movie"} if kind == "movie" else {"tvSeries", "tvMiniSeries"}
+    unresolved: dict[tuple[str, str], dict] = {}
+    for item in official_rows:
+        if not item.get("id"):
+            unresolved[(title_key(item["title"]), str(item.get("year") or "")[:4])] = item
+
     candidates: list[dict] = []
     rating_sum = 0.0
     rating_count = 0
@@ -149,10 +158,7 @@ def build_extension(kind: str, official_rows: list[dict], ratings: dict[str, tup
         if row.get("isAdult") == "1":
             continue
         identifier = row.get("tconst", "")
-        if not identifier or identifier in official_ids:
-            continue
-        rating_data = ratings.get(identifier)
-        if not rating_data:
+        if not identifier:
             continue
         title = (row.get("primaryTitle") or "").strip()
         if not title:
@@ -164,6 +170,26 @@ def build_extension(kind: str, official_rows: list[dict], ratings: dict[str, tup
             runtime = row.get("runtimeMinutes", "")
             if not runtime.isdigit() or int(runtime) < 45:
                 continue
+
+        # The community chart mirror occasionally omits an IMDb ID for a row.
+        # Resolve that row against IMDb's own title basics by exact title + year.
+        unresolved_key = (title_key(title), start_year)
+        missing_chart_row = unresolved.get(unresolved_key)
+        if missing_chart_row:
+            missing_chart_row["id"] = identifier
+            missing_chart_row["url"] = f"https://www.imdb.com/title/{identifier}/"
+            rating_data = ratings.get(identifier)
+            if rating_data:
+                missing_chart_row["rating"], missing_chart_row["votes"] = rating_data
+            official_ids.add(identifier)
+            del unresolved[unresolved_key]
+            continue
+
+        if identifier in official_ids:
+            continue
+        rating_data = ratings.get(identifier)
+        if not rating_data:
+            continue
         rating, votes = rating_data
         candidates.append({
             "id": identifier,
@@ -178,6 +204,18 @@ def build_extension(kind: str, official_rows: list[dict], ratings: dict[str, tup
         })
         rating_sum += rating
         rating_count += 1
+
+    if unresolved:
+        titles = ", ".join(item["title"] for item in unresolved.values())
+        raise RuntimeError(f"Could not resolve missing IMDb IDs for {kind} chart rows: {titles}")
+
+    # Fill rating/vote fields from IMDb's official ratings dataset when the
+    # chart mirror omitted them.
+    for item in official_rows:
+        if item.get("id") and (item.get("rating") is None or not item.get("votes")):
+            rating_data = ratings.get(item["id"])
+            if rating_data:
+                item["rating"], item["votes"] = rating_data
 
     if not candidates:
         raise RuntimeError(f"No eligible supplementary {kind} titles were found.")
