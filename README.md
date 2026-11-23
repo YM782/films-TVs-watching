@@ -39,16 +39,16 @@
 ## 榜單專刊（rankings.html）
 
 - 獨立的雜誌式排行榜頁面，不會把平台不同的排名方法混成一個總分。
-- IMDb 電影與電視榜：從第三方開源 IMDb Top 250 API 載入各自前 100 名，顯示名次、原文片名、年份、IMDb 分數、投票數及 IMDb 作品連結。
-- IMDb 代理 API：`https://imdb-top250.mmdju.workers.dev`。該服務讀取 IMDb 公開榜單，最多每日刷新一次，並提供快取備援；它不是 IMDb 官方 API。代理不提供海報圖片。
-- 海報顯示：若 IMDb 作品能匹配本站 `data/movies.json`，就使用本站已有海報；未匹配的作品以 CineScope 文字封面呈現，不會假裝有官方海報。
+- IMDb 電影與電視榜：各收錄 300 部。前 250 名沿用 IMDb 公開 Top 250 榜單；第 251–300 名是 CineScope 根據 IMDb 官方非商業資料集的評分與投票數計算的延伸排名，並非 IMDb 官方 Top 300。
+- IMDb 榜單資料由 `https://imdb-top250.mmdju.workers.dev` 提供前 250 名；該服務是社群代理，不是 IMDb 官方 API。第 251–300 名由 GitHub Actions 讀取 IMDb 官方非商業資料集後計算。
+- 海報顯示：優先使用本站已有海報，否則按 IMDb ID 載入 MetaHub 海報 CDN（`images.metahub.space/poster/medium/{imdb_id}/img`）；來源沒有圖片或圖片失效時自動回退至文字封面。
 - 榜單收藏：本頁的收藏使用獨立的瀏覽器 localStorage key（`cinescope-ranking-watchlist-v1`），與首頁個人片庫收藏分開保存。
 - Rotten Tomatoes 原始入口：官方影史電影 300 部榜、官方恐怖劇集 100 部榜。
 - 豆瓣原始入口：電影 Top 250 與劇集分類／排行榜入口。
 
 ### 榜單口徑與限制
 
-- IMDb 官方提供 Top 250 電影及 Top 250 電視節目；本站顯示各榜前 100 名。IMDb 的榜單排名考慮常規用戶投票與加權分數，不能只按平均分重排。
+- IMDb 官方提供 Top 250 電影及 Top 250 電視節目；本站完整顯示這 250 名，再以公開資料集計算 50 名延伸作品。延伸排名使用最低 25,000 票及 Bayesian weighted rating，並明確標記為本站延伸榜，不會冒充 IMDb 官方排名。
 - Rotten Tomatoes 的影史電影榜為 300 部；其 100 部電視榜是「恐怖類型劇集」榜，不代表全類型電視劇 Top 100。
 - 豆瓣電影 Top 250 是固定電影榜；豆瓣劇集頁面提供多種分類及榜單入口，並非一份固定的全球歷史 Top 100。
 - 本站不會為了湊齊六張 Top 100 而捏造平台不存在的官方榜單。需要比較時，請先確認榜單範圍、更新日期和排序方法。
@@ -92,39 +92,45 @@
 - 本站為個人影視整理工具，與 Rotten Tomatoes、IMDb、豆瓣及海報權利人均無隸屬或官方合作關係。
 
 
-## IMDb 榜單真實海報補全（TMDb）
+## 電影 Top 300、劇集 Top 300 與海報自動更新
 
-排行榜頁面使用 IMDb ID 對照 TMDb 海報資料，海報圖片由 TMDb CDN 提供：
-`https://image.tmdb.org/t/p/w500/{poster_path}`。TMDb 的圖片 URL 組成方式見 [官方 Image Basics](https://developer.themoviedb.org/docs/image-basics)。
+排行榜資料會生成到 `data/rankings-top300.json`，由 GitHub Pages 直接讀取，不需要訪客在瀏覽器等待第三方榜單 API。
 
-### 一次性設定 API 金鑰
+### 排名方法
 
-請勿把 TMDb Token 寫入 HTML、JavaScript 或公開 JSON，也不要貼在聊天訊息或公開 Issue。
+1. 第 1–250 名：使用 IMDb 公開 Top 250 電影榜與 Top 250 電視榜快照。
+2. 第 251–300 名：從 IMDb 官方非商業資料集中選出尚未進入前 250 名的作品。
+3. 延伸作品最低投票數為 25,000；按 IMDb 評分與投票數計算 Bayesian weighted rating，減少低票數作品因平均分偏高而排得過前。
+4. 電影只收錄 feature movie（片長至少 45 分鐘）；電視收錄 TV Series 及 TV Mini Series。
+5. 第 251–300 名是 CineScope 自訂延伸排名，**不是 IMDb 官方 Top 300**。頁面及資料檔會保留此說明。
 
-1. 登入 [TMDb](https://www.themoviedb.org/)，到帳戶設定中的 API 頁面申請 API Read Access Token。
-2. 打開本 GitHub 倉庫的 **Settings → Secrets and variables → Actions**。
-3. 點擊 **New repository secret**。
-4. Name 填入 `TMDB_READ_ACCESS_TOKEN`，Secret 貼上 TMDb 的 API Read Access Token，然後儲存。
-5. 打開倉庫 **Actions → Refresh ranking posters → Run workflow**。
-6. 工作流程會從 IMDb 電影及電視榜各取前 100 部，先按 IMDb ID 呼叫 TMDb `/find/{external_id}?external_source=imdb_id`；無法配對時才按片名及年份搜尋。
-7. 配對結果寫入 `data/ranking-posters.json`，只保存公開海報路徑、TMDb ID、媒體類型和配對資訊；Token 只存在 GitHub Actions Secret。
-8. 成功後重新整理 [排行榜專刊](https://ym782.github.io/films-TVs-watching/rankings.html)。工作流程另設每週自動更新。
+### 海報圖片
 
-### 海報配對與備援
+- 前端先使用 `data/movies.json` 中已有的海報。
+- 沒有本地海報時，按 IMDb ID 載入 MetaHub 圖片 CDN：`https://images.metahub.space/poster/medium/{imdb_id}/img`。
+- 圖片載入失敗會自動移除破圖並顯示雜誌式文字封面。
+- 不需要 TMDb API Token，也不會把任何私人金鑰放進前端。
+- 海報由第三方 CDN 提供，本站不擁有圖片著作權；圖片可用性及授權以來源服務和權利人條款為準。
 
-- 前端按 IMDb ID 讀取海報清單，不再依賴片名碰巧相同。
-- 已有的 `data/movies.json` 海報仍作為備援來源。
-- 圖片載入失敗時會回退至文字封面，避免出現破圖圖示。
-- 榜單會顯示已配對的海報數量；未配對的作品列在 manifest 的 `unmatched` 欄位，方便人工檢查。
-- TMDb API Token 不會出現在公開網頁；海報圖片 URL 本身是公開 CDN 資源。
+### 自動生成與更新
 
-### TMDb 署名與使用條款
+GitHub Actions 工作流程：`.github/workflows/build-top300-catalog.yml`。
 
-本專案已在排行榜專刊加入 TMDb 標誌及以下聲明：
+- 支援手動執行：Repository → Actions → Build IMDb Top 300 Catalog → Run workflow。
+- 每週自動更新一次。
+- 修改排名生成程式或工作流程時會自動觸發。
+- 工作流程下載 IMDb 官方公開資料集、產生 300 部電影及 300 部劇集資料，並提交至 `data/rankings-top300.json`。
+- 不需要設定 API Secret。
 
-> This product uses the TMDB API but is not endorsed or certified by TMDB.
+### 資料來源與使用限制
 
-TMDb 官方要求使用其核准標誌並在應用程式中提供上述聲明。非商業用途可依其規定免費使用 API 並註明來源；商業用途請先向 TMDb 確認授權。詳見 [TMDb FAQ](https://developer.themoviedb.org/docs/faq) 及 [Logos & Attribution](https://www.themoviedb.org/about/logos-attribution)。
+- [IMDb Top 250 Movies](https://www.imdb.com/chart/top/)
+- [IMDb Top 250 TV Shows](https://www.imdb.com/chart/toptv/)
+- [IMDb 官方非商業資料集](https://developer.imdb.com/non-commercial-datasets/)
+- [IMDb Top 250 社群 JSON 代理原始碼](https://github.com/mmdju/imdb-top250-api)
+- [MetaHub 海報 CDN 範例與格式](https://docs.emet.live/addon-guide/meta/)
+
+IMDb 官方資料集只供個人及非商業用途，使用前須遵守 IMDb 的非商業資料集條款。本站不是 IMDb、MetaHub 或其他影視平台的官方產品。
 
 ## 個人收藏的儲存方式
 
