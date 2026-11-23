@@ -88,3 +88,5 @@
 .tmdb-credit p{font-size:9px;line-height:1.6;color:#a3afc0;margin:5px 0}
 .tmdb-credit div>a{font-size:9px;color:var(--gold)}
 @media(max-width:600px){.tmdb-credit{align-items:flex-start;padding:13px;gap:12px}.tmdb-credit>a{width:60px;height:45px}}
+
+.rank-source-tag{display:inline-block;margin:0 0 7px;padding:3px 5px;border:1px solid #c7a66f55;border-radius:2px;color:#d8b97f;font-size:7px;letter-spacing:.12em}
