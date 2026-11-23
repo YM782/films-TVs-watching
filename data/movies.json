@@ -10,16 +10,25 @@
       "country": "美國",
       "runtime": "142 分鐘",
       "director": "Frank Darabont",
-      "genres": ["劇情", "犯罪"],
+      "genres": [
+        "劇情",
+        "犯罪"
+      ],
       "summary": "銀行家 Andy Dufresne 被判終身監禁，在殘酷的肖申克監獄中，他與 Red 建立友誼，並始終沒有放棄希望。",
       "poster": "https://filmartgallery.com/cdn/shop/files/The-Shawshank-Redemption-Vintage-Movie-Poster-Original-1-Sheet-27x41.jpg?v=1683320462",
       "posterSource": "https://filmartgallery.com/products/the-shawshank-redemption-3",
-      "ratings": { "tomato": 89, "popcorn": 98, "imdb": 9.3, "douban": 9.7 },
+      "ratings": {
+        "tomato": 89,
+        "popcorn": 98,
+        "imdb": 9.3,
+        "douban": 9.7
+      },
       "links": {
         "tomato": "https://www.rottentomatoes.com/m/shawshank_redemption",
         "imdb": "https://www.imdb.com/title/tt0111161/",
         "douban": "https://movie.douban.com/subject/1292052/"
-      }
+      },
+      "type": "movie"
     },
     {
       "id": "godfather-1972",
@@ -29,16 +38,25 @@
       "country": "美國",
       "runtime": "175 分鐘",
       "director": "Francis Ford Coppola",
-      "genres": ["犯罪", "劇情"],
+      "genres": [
+        "犯罪",
+        "劇情"
+      ],
       "summary": "黑手黨家族的老教父準備交出權力，原本不願涉足家族事業的小兒子 Michael，逐漸被捲入權力、忠誠與背叛的循環。",
       "poster": "https://clickamericana.com/wp-content/uploads/The-Godfather-movie-poster-1972-750x1065.jpg",
       "posterSource": "https://clickamericana.com/media/movies-motion-pictures/the-godfather-the-gangster-movie-moves-uptown-1972",
-      "ratings": { "tomato": 97, "popcorn": 98, "imdb": 9.2, "douban": 9.3 },
+      "ratings": {
+        "tomato": 97,
+        "popcorn": 98,
+        "imdb": 9.2,
+        "douban": 9.3
+      },
       "links": {
         "tomato": "https://www.rottentomatoes.com/m/the_godfather",
         "imdb": "https://www.imdb.com/title/tt0068646/",
         "douban": "https://movie.douban.com/subject/1291841/"
-      }
+      },
+      "type": "movie"
     },
     {
       "id": "dark-knight-2008",
@@ -48,16 +66,26 @@
       "country": "美國／英國",
       "runtime": "152 分鐘",
       "director": "Christopher Nolan",
-      "genres": ["動作", "犯罪", "劇情"],
+      "genres": [
+        "動作",
+        "犯罪",
+        "劇情"
+      ],
       "summary": "小丑讓高譚市陷入混亂，蝙蝠俠、警長 Gordon 與檢察官 Harvey Dent 必須在正義與混亂之間作出艱難抉擇。",
       "poster": "https://filmartgallery.com/cdn/shop/files/The-Dark-Knight-Vintage-Movie-Poster-Original_96d3cfa1_5000x.jpg?v=1773198168",
       "posterSource": "https://filmartgallery.com/products/the-dark-knight-4",
-      "ratings": { "tomato": 94, "popcorn": 94, "imdb": 9.1, "douban": 9.2 },
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 94,
+        "imdb": 9.1,
+        "douban": 9.2
+      },
       "links": {
         "tomato": "https://www.rottentomatoes.com/m/the_dark_knight",
         "imdb": "https://www.imdb.com/title/tt0468569/",
         "douban": "https://movie.douban.com/subject/1851857/"
-      }
+      },
+      "type": "movie"
     },
     {
       "id": "interstellar-2014",
@@ -67,16 +95,26 @@
       "country": "美國／英國／加拿大",
       "runtime": "169 分鐘",
       "director": "Christopher Nolan",
-      "genres": ["科幻", "冒險", "劇情"],
+      "genres": [
+        "科幻",
+        "冒險",
+        "劇情"
+      ],
       "summary": "地球環境急速惡化，一隊太空人穿越蟲洞尋找人類的新家園。電影以宇宙、時間與親情交織出一場漫長旅程。",
       "poster": "https://cdn.mos.cms.futurecdn.net/xFQ8L37EP3ARaoFg8cQYCD.jpg",
       "posterSource": "https://www.space.com/28090-interstellar-movie-special-effects-paul-franklin.html",
-      "ratings": { "tomato": 73, "popcorn": 87, "imdb": 8.7, "douban": 9.4 },
+      "ratings": {
+        "tomato": 73,
+        "popcorn": 87,
+        "imdb": 8.7,
+        "douban": 9.4
+      },
       "links": {
         "tomato": "https://www.rottentomatoes.com/m/interstellar_2014",
         "imdb": "https://www.imdb.com/title/tt0816692/",
         "douban": "https://movie.douban.com/subject/1889243/"
-      }
+      },
+      "type": "movie"
     },
     {
       "id": "spirited-away-2001",
@@ -86,16 +124,26 @@
       "country": "日本",
       "runtime": "125 分鐘",
       "director": "宮崎駿",
-      "genres": ["動畫", "奇幻", "冒險"],
+      "genres": [
+        "動畫",
+        "奇幻",
+        "冒險"
+      ],
       "summary": "千尋和父母誤闖神靈世界，父母被變成豬。為了救回家人，她必須在神秘澡堂工作，並在旅途中學會勇氣與成長。",
       "poster": "https://posterhubstudio.com/cdn/shop/files/LE-VOYAGE-DE-CHIHIRO-SPIRITED-AWAY-TOHO-2001-repro-affiche-de-cinema-HQ.webp?v=1779370666&width=1946",
       "posterSource": "https://posterhubstudio.com/en/products/spirited-away-toho-2001-repro-affiche-de-cinema-hq",
-      "ratings": { "tomato": 96, "popcorn": 99, "imdb": 8.6, "douban": 9.4 },
+      "ratings": {
+        "tomato": 96,
+        "popcorn": 99,
+        "imdb": 8.6,
+        "douban": 9.4
+      },
       "links": {
         "tomato": "https://www.rottentomatoes.com/m/spirited_away",
         "imdb": "https://www.imdb.com/title/tt0245429/",
         "douban": "https://movie.douban.com/subject/1291561/"
-      }
+      },
+      "type": "movie"
     },
     {
       "id": "inception-2010",
@@ -105,16 +153,26 @@
       "country": "美國／英國",
       "runtime": "148 分鐘",
       "director": "Christopher Nolan",
-      "genres": ["科幻", "懸疑", "動作"],
+      "genres": [
+        "科幻",
+        "懸疑",
+        "動作"
+      ],
       "summary": "Dom Cobb 擅長潛入他人的夢境竊取秘密，這次他接下更困難的任務：不是偷走想法，而是把一個想法植入別人的腦海。",
       "poster": "https://artofthemovies.co.uk/cdn/shop/files/inception_advance_SD18120_B-731214_920c5dfe-8d66-47c7-af74-11b98a83ebbf_1024x1024%402x.jpg?v=1737545739",
       "posterSource": "https://artofthemovies.co.uk/products/inception-2010-ds-os-02",
-      "ratings": { "tomato": 86, "popcorn": 91, "imdb": 8.8, "douban": 9.4 },
+      "ratings": {
+        "tomato": 86,
+        "popcorn": 91,
+        "imdb": 8.8,
+        "douban": 9.4
+      },
       "links": {
         "tomato": "https://www.rottentomatoes.com/m/inception",
         "imdb": "https://www.imdb.com/title/tt1375666/",
         "douban": "https://movie.douban.com/subject/3541415/"
-      }
+      },
+      "type": "movie"
     },
     {
       "id": "parasite-2019",
@@ -124,15 +182,83 @@
       "country": "韓國",
       "runtime": "132 分鐘",
       "director": "奉俊昊",
-      "genres": ["劇情", "懸疑", "驚悚"],
+      "genres": [
+        "劇情",
+        "懸疑",
+        "驚悚"
+      ],
       "summary": "一個住在半地下室的家庭，逐步進入富裕朴家人的生活。兩個家庭看似互相依存，卻逐漸揭開階級、慾望與秘密。",
       "poster": "https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219062/Parasite2019.jpg",
       "posterSource": "https://www.fandango.com/parasite-2019-219062/movie-photos-posters",
-      "ratings": { "tomato": 99, "popcorn": 90, "imdb": 8.5, "douban": 8.8 },
+      "ratings": {
+        "tomato": 99,
+        "popcorn": 90,
+        "imdb": 8.5,
+        "douban": 8.8
+      },
       "links": {
         "tomato": "https://www.rottentomatoes.com/m/parasite_2019",
         "imdb": "https://www.imdb.com/title/tt6751668/",
         "douban": "https://movie.douban.com/subject/27010768/"
+      },
+      "type": "movie"
+    },
+    {
+      "id": "breaking-bad-2008",
+      "type": "tv",
+      "titleZh": "絕命毒師",
+      "titleEn": "Breaking Bad",
+      "year": 2008,
+      "country": "美國",
+      "runtime": "5 季 · 62 集",
+      "director": "Vince Gilligan",
+      "genres": [
+        "劇集",
+        "犯罪",
+        "劇情"
+      ],
+      "summary": "高中化學老師 Walter White 得知自己罹患癌症後，與昔日學生 Jesse Pinkman 合作製造毒品，逐步走上一條改變人生的道路。",
+      "poster": "https://storage.evrimagaci.org/old/mi_media/a3bb95fb0057fdc5eb4685f6ad39e7ee.jpeg",
+      "posterSource": "https://evrimagaci.org/eser/breaking-bad-621",
+      "ratings": {
+        "tomato": 96,
+        "popcorn": 97,
+        "imdb": 9.5,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/breaking_bad",
+        "imdb": "https://www.imdb.com/title/tt0903747/",
+        "douban": ""
+      }
+    },
+    {
+      "id": "chernobyl-2019",
+      "type": "tv",
+      "titleZh": "切爾諾貝利",
+      "titleEn": "Chernobyl",
+      "year": 2019,
+      "country": "美國／英國",
+      "runtime": "迷你劇 · 5 集",
+      "director": "Johan Renck",
+      "genres": [
+        "劇集",
+        "歷史",
+        "劇情"
+      ],
+      "summary": "1986 年切爾諾貝利核電廠事故發生後，科學家、救援人員與官員在災難中努力控制危機，並面對謊言與制度失靈的代價。",
+      "poster": "https://pics.filmaffinity.com/chernobyl-954795032-large.jpg",
+      "posterSource": "https://www.filmaffinity.com/us/movieimage.php?imageId=954795032",
+      "ratings": {
+        "tomato": 95,
+        "popcorn": 97,
+        "imdb": 9.3,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/chernobyl",
+        "imdb": "https://www.imdb.com/title/tt7366338/",
+        "douban": ""
       }
     }
   ]
