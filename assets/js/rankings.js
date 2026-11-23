@@ -1,11 +1,11 @@
 (() => {
   const $ = (selector, root = document) => root.querySelector(selector);
   const API = {
-    movie: "https://imdb-top250.mmdju.workers.dev/top250?limit=100",
-    tv: "https://imdb-top250.mmdju.workers.dev/toptv?limit=100"
+    movie: "https://imdb-top250.mmdju.workers.dev/top250?limit=250",
+    tv: "https://imdb-top250.mmdju.workers.dev/toptv?limit=250"
   };
   const WATCH_KEY = "cinescope-ranking-watchlist-v1";
-  const state = { movie: [], tv: [], kind: "all", search: "", saved: new Set(), localMovies: [], posterManifest: {}, posterManifestMeta: {} };
+  const state = { movie: [], tv: [], kind: "all", search: "", saved: new Set(), localMovies: [], posterManifest: {}, posterManifestMeta: {}, catalog: null };
   const chineseTitles = {
     "the shawshank redemption":"肖申克的救贖","the godfather":"教父","the dark knight":"蝙蝠俠：黑暗騎士",
     "the godfather part ii":"教父續集","the lord of the rings: the return of the king":"魔戒三部曲：王者再臨",
@@ -78,27 +78,33 @@
       String(raw.url || raw.link || "").match(/tt\d+/)?.[0] || "";
     const posterRecord = state.posterManifest[imdbId] ||
       state.posterManifest[`title:${normalize(rawTitle)}`] || null;
+    const poster = posterRecord?.poster || local?.poster ||
+      (imdbId ? `https://images.metahub.space/poster/medium/${imdbId}/img` : "");
     return {
       id: imdbId ? `imdb-${imdbId}` : `imdb-${kind}-${raw.rank}-${normalize(rawTitle)}`,
       imdbId, rank: Number(raw.rank) || 0, title: rawTitle, titleZh,
       year: raw.year || "", rating: raw.rating == null || raw.rating === "" ? null : (Number.isFinite(Number(raw.rating)) ? Number(raw.rating) : null),
       votes: Number(raw.votes) || 0, url: raw.url || (imdbId ? `https://www.imdb.com/title/${imdbId}/` : "https://www.imdb.com/chart/"),
-      poster: posterRecord?.poster || local?.poster || "",
-      posterSource: posterRecord?.source || (local?.poster ? "local-library" : ""),
+      poster, posterSource: posterRecord?.source || (local?.poster ? "local-library" : (imdbId ? "MetaHub poster CDN" : "")),
+      rankSource: raw.rankSource || "IMDb Top 250",
       kind, localId: local?.id || ""
     };
   }
 
   async function loadChart(kind) {
-    const response = await fetch(API[kind], { headers: { "Accept": "application/json" }, cache: "no-store" });
-    if (!response.ok) throw new Error(`${kind} chart HTTP ${response.status}`);
-    const payload = await response.json();
-    const rows = Array.isArray(payload) ? payload : (payload.data || payload.items || []);
+    let payload = state.catalog;
+    let rows = payload && Array.isArray(payload[kind]) ? payload[kind] : null;
+    if (!rows || !rows.length) {
+      const response = await fetch(API[kind], { headers: { "Accept": "application/json" }, cache: "no-store" });
+      if (!response.ok) throw new Error(`${kind} chart HTTP ${response.status}`);
+      payload = await response.json();
+      rows = Array.isArray(payload) ? payload : (payload.data || payload.items || []);
+    }
     if (!Array.isArray(rows) || !rows.length) throw new Error(`${kind} chart has no data`);
     return {
-      items: rows.slice(0, 100).map(item => makeItem(item, kind)),
-      updatedAt: payload.updatedAt || payload.updated_at || "",
-      source: payload.source || ""
+      items: rows.slice(0, 300).map((item, index) => makeItem({ ...item, rank: item.rank || index + 1 }, kind)),
+      updatedAt: payload.generatedAt || payload.updatedAt || payload.updated_at || "",
+      source: payload.source || "IMDb Top 250 + CineScope weighted-rating extension"
     };
   }
 
@@ -136,14 +142,9 @@
       .sort((a, b) => a.kind === b.kind ? a.rank - b.rank : a.kind === "movie" ? -1 : 1);
     $("#rankPosterGrid").innerHTML = items.length ? items.map(cardHtml).join("") :
       '<div class="rank-loading">沒有符合條件的作品。請清除搜尋或切換類型。</div>';
-    const allItems = [...state.movie, ...state.tv];
-    const posterCount = allItems.filter(item => Boolean(item.poster)).length;
-    const posterTotal = allItems.length;
-    $("#rankStatus").textContent = `顯示 ${items.length} 部作品 · 電影 ${state.movie.length} 部 · 劇集 ${state.tv.length} 部 · 海報 ${posterCount}/${posterTotal}`;
-    const generatedAt = state.posterManifestMeta.generatedAt ? new Date(state.posterManifestMeta.generatedAt).toLocaleDateString("zh-HK") : "";
-    $("#rankPaginationNote").textContent = posterCount < posterTotal
-      ? `IMDb 電影及劇集各顯示前 100 名。已有 ${posterCount} 張真實海報；其餘作品會保留清晰的文字備用封面。設定 TMDb API 金鑰並執行 GitHub Actions，可補齊海報。`
-      : `IMDb 電影及劇集各顯示前 100 名 · 海報資料更新：${generatedAt || "本地片庫"} · 點擊 IMDb 詳情核對排名。`;
+    $("#rankStatus").textContent = `顯示 ${items.length} 部作品 · 電影 ${state.movie.length}/300 部 · 劇集 ${state.tv.length}/300 部`;
+    const generatedAt = state.catalog?.generatedAt ? new Date(state.catalog.generatedAt).toLocaleDateString("zh-HK") : "";
+    $("#rankPaginationNote").textContent = `電影及劇集各 300 部。第 1–250 名沿用 IMDb 榜單；第 251–300 名為 CineScope 按 IMDb 公開評分及投票數計算的延伸排名，並非 IMDb 官方 Top 300。海報按 IMDb ID 從 MetaHub 圖片 CDN 載入，若來源沒有圖片會自動顯示備用封面。${generatedAt ? ` 資料更新：${generatedAt}。` : ""}`;
     $("#imdbMovieCount").textContent = state.movie.length ? String(state.movie.length) : "—";
     $("#imdbTvCount").textContent = state.tv.length ? String(state.tv.length) : "—";
     $("#rankPosterGrid").querySelectorAll("img").forEach(img => {
@@ -168,9 +169,9 @@
 
   async function init() {
     loadSaved();
-    const [localResult, posterResult] = await Promise.allSettled([
+    const [localResult, catalogResult] = await Promise.allSettled([
       fetch("./data/movies.json", { cache: "no-cache" }),
-      fetch("./data/ranking-posters.json", { cache: "no-cache" })
+      fetch("./data/rankings-top300.json", { cache: "no-cache" })
     ]);
     if (localResult.status === "fulfilled" && localResult.value.ok) {
       try {
@@ -178,11 +179,9 @@
         state.localMovies = Array.isArray(data.movies) ? data.movies : [];
       } catch (_) {}
     }
-    if (posterResult.status === "fulfilled" && posterResult.value.ok) {
+    if (catalogResult.status === "fulfilled" && catalogResult.value.ok) {
       try {
-        const data = await posterResult.value.json();
-        state.posterManifest = data.posters && typeof data.posters === "object" ? data.posters : {};
-        state.posterManifestMeta = data;
+        state.catalog = await catalogResult.value.json();
       } catch (_) {}
     }
     const results = await Promise.allSettled([loadChart("movie"), loadChart("tv")]);
