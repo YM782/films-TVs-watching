@@ -115,6 +115,7 @@
     const score = item.rating == null ? "—" : item.rating.toFixed(1);
     const votes = item.votes ? item.votes.toLocaleString("en-US") : "—";
     const image = item.poster ? `<img src="${escapeHtml(item.poster)}" alt="${escapeHtml(primary)} 海報" loading="lazy">` : "";
+    const rankSource = item.rank > 250 ? '<span class="rank-source-tag">CINE SCOPE EXTENSION</span>' : "";
     return `
       <article class="rank-poster-card" data-kind="${item.kind}">
         <div class="rank-poster-art ${item.poster ? "has-poster" : ""}">
@@ -128,6 +129,7 @@
         <div class="rank-poster-info">
           <h3>${escapeHtml(primary)}</h3>
           <p>${escapeHtml(secondary)}</p>
+          ${rankSource}
           <div><span>${escapeHtml(String(item.year || "年份未提供"))}</span><span>${votes} votes</span></div>
           <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">IMDb 詳情 ↗</a>
         </div>
