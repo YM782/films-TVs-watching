@@ -1,0 +1,47 @@
+name: Build IMDb Top 300 Catalog
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 2 * * 1"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/build_top300_catalog.py"
+      - ".github/workflows/build-top300-catalog.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-top300-catalog
+  cancel-in-progress: false
+
+jobs:
+  build-catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build 300 movies and 300 TV titles
+        run: python scripts/build_top300_catalog.py
+
+      - name: Commit generated catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rankings-top300.json
+          if git diff --cached --quiet; then
+            echo "Top 300 catalog is unchanged."
+          else
+            git commit -m "Refresh Top 300 movie and TV catalog"
+            git push
+          fi
