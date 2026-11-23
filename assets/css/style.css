@@ -16,3 +16,5 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,5vw,84px)}.hero{min-heigh
 @media(max-width:390px){.main-nav{gap:10px}.nav-link{font-size:10px}.movie-grid{gap:19px 9px}.rating-chip small{font-size:6px}.rating-chip b{font-size:10px}.hero-actions{gap:15px}.hero-sub{font-size:13px}}
 
 .poster-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;padding:20px;color:#d9c49e;font-family:Georgia,serif;font-size:20px;letter-spacing:.04em;background:radial-gradient(circle at 50% 35%,#42516b,#101723 68%)}.poster-failed .poster-fallback{display:flex}
+
+.secondary-score{display:block;color:#8492a7;font-size:8px;line-height:1.5;margin-top:4px}
