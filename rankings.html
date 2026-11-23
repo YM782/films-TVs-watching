@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="CineScope Journal 榜單專刊：IMDb 電影與劇集 Top 100 即時索引，並整理 Rotten Tomatoes 與豆瓣官方榜單入口。">
+  <title>榜單專刊｜CineScope Journal</title>
+  <link rel="preconnect" href="https://image.tmdb.org">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/rankings.css">
+  <script defer src="./assets/js/rankings.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="CineScope 首頁"><span class="brand-mark">C</span><span>CINE<span class="brand-light">SCOPE</span></span></a>
+    <nav class="main-nav" aria-label="主導覽">
+      <a class="nav-link" href="./">雜誌首頁</a>
+      <a class="nav-link active" href="./rankings.html">榜單專刊</a>
+      <a class="nav-link" href="./#catalog">我的片庫</a>
+    </nav>
+    <div class="top-actions"><a class="profile-chip" href="./#catalog"><span class="profile-dot"></span> 個人片庫</a></div>
+  </header>
+
+  <main class="rankings-main">
+    <section class="issue-masthead">
+      <div class="issue-topline"><span>THE GLOBAL SCREEN JOURNAL</span><span>RANKING SPECIAL · 001</span></div>
+      <div class="issue-title-row">
+        <span class="issue-side">THE<br>RANKING<br>EDITION</span>
+        <div class="issue-wordmark">CINE<span>SCOPE</span><small>THE WORLD'S SCREEN INDEX</small></div>
+        <span class="issue-side issue-side-right">MOVIES<br>TELEVISION<br>DOCUMENTARY</span>
+      </div>
+      <div class="issue-bottomline"><span>全球影視榜單 · 原始來源 · 可收藏海報索引</span><span>VOL. 01 / 2026</span></div>
+    </section>
+
+    <section class="rankings-intro">
+      <p class="eyebrow">THE RANKING ISSUE</p>
+      <h1>把好作品，<em>排成一冊。</em></h1>
+      <p>電影與劇集分開整理，保留每個平台自己的排名方法。IMDb 榜單會從公開榜單代理服務載入最新快照；Rotten Tomatoes 與豆瓣則保留原始榜單入口，不混造不存在的統一名次。</p>
+      <div class="ranking-metrics">
+        <div><strong id="imdbMovieCount">—</strong><span>IMDb 電影榜</span></div>
+        <i></i>
+        <div><strong id="imdbTvCount">—</strong><span>IMDb 劇集榜</span></div>
+        <i></i>
+        <div><strong id="savedCount">0</strong><span>本頁收藏</span></div>
+      </div>
+    </section>
+
+    <section class="source-shelf" aria-label="其他平台原始榜單">
+      <div class="source-shelf-heading"><div><p class="eyebrow">ORIGINAL SOURCES</p><h2>其他平台的原始榜單</h2></div><p>點擊卡片會開啟平台原始頁面。不同榜單的範圍和排序規則不同，請勿直接比較名次。</p></div>
+      <div class="source-shelf-grid">
+        <a class="source-tile rt-tile" href="https://editorial.rottentomatoes.com/guide/best-movies-of-all-time/" target="_blank" rel="noopener noreferrer">
+          <span class="source-tile-top">🍅 ROTTEN TOMATOES · FILM</span><b>300 Best Movies<br>of All Time</b><small>影史電影編輯榜 · 300 部</small><span class="source-tile-link">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="source-tile rt-tile" href="https://editorial.rottentomatoes.com/guide/best-horror-tv-shows-of-all-time/" target="_blank" rel="noopener noreferrer">
+          <span class="source-tile-top">🍅 ROTTEN TOMATOES · TV</span><b>100 Best Horror<br>TV Series</b><small>恐怖類型劇集榜 · 100 部</small><span class="source-tile-link">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="source-tile douban-tile" href="https://movie.douban.com/top250" target="_blank" rel="noopener noreferrer">
+          <span class="source-tile-top">豆瓣 · FILM</span><b>豆瓣電影<br>Top 250</b><small>觀眾評價與評價人數綜合榜</small><span class="source-tile-link">OPEN ORIGINAL LIST ↗</span>
+        </a>
+        <a class="source-tile douban-tile" href="https://movie.douban.com/tv/" target="_blank" rel="noopener noreferrer">
+          <span class="source-tile-top">豆瓣 · TV</span><b>豆瓣劇集<br>排行榜入口</b><small>按綜合、地區、類型等維度瀏覽</small><span class="source-tile-link">OPEN ORIGINAL LIST ↗</span>
+        </a>
+      </div>
+      <p class="source-method-note">榜單口徑：Rotten Tomatoes 提供 300 部影史電影榜及 100 部恐怖劇集榜；IMDb 提供 Top 250 電影與 Top 250 電視節目；豆瓣提供電影 Top 250 與多維度劇集榜。豆瓣劇集入口並非一張固定的全球歷史 Top 100。本站不會把類型榜、季榜或編輯專題改稱為全類型官方總榜。</p>
+    </section>
+
+    <section class="live-rankings" id="imdb-rankings">
+      <div class="live-heading">
+        <div><p class="eyebrow">LIVE CHART SNAPSHOT · IMDb</p><h2>IMDb 海報榜單</h2><p class="live-description">載入 IMDb Top 250 的前 100 名。排名、分數與投票數來自榜單資料；海報若能與你的現有片庫匹配，就會顯示原片庫海報，否則使用雜誌式文字封面。</p></div>
+        <a class="open-imdb" href="https://www.imdb.com/chart/top/" target="_blank" rel="noopener noreferrer">IMDb 官方榜單 ↗</a>
+      </div>
+
+      <div class="rank-toolbar">
+        <label class="rank-search"><span>⌕</span><input id="rankSearch" type="search" placeholder="搜尋片名…" autocomplete="off"></label>
+        <div class="rank-filters" role="group" aria-label="榜單類型">
+          <button type="button" class="rank-filter active" data-kind="all">全部</button>
+          <button type="button" class="rank-filter" data-kind="movie">電影</button>
+          <button type="button" class="rank-filter" data-kind="tv">劇集</button>
+        </div>
+      </div>
+      <div class="rank-status" id="rankStatus" role="status">正在載入 IMDb 榜單…</div>
+      <div class="rank-poster-grid" id="rankPosterGrid">
+        <div class="rank-loading">正在整理榜單與海報…</div>
+      </div>
+      <div class="rank-pagination-note" id="rankPaginationNote"></div>
+    </section>
+
+    <section class="methodology">
+      <p class="eyebrow">READ THE CHARTS</p>
+      <h2>排名不是同一把尺。</h2>
+      <div class="methodology-grid">
+        <div><b>IMDb</b><p>Top 250 以常規用戶投票計算加權排名，電影與電視榜分開；電影榜只收錄院線長片。</p></div>
+        <div><b>Rotten Tomatoes</b><p>Tomatometer 是影評人正面評價比例；不同編輯榜還可能加入觀眾分數、評論量和編輯調整。</p></div>
+        <div><b>豆瓣</b><p>電影 Top 250 會綜合用戶評價與評價人數；劇集榜則依頁面提供的類型、地區等分類瀏覽。</p></div>
+      </div>
+      <p class="data-note">IMDb 榜單透過第三方開源代理讀取 IMDb 公開榜單，代理服務可能有快取或短暫中斷；請以 IMDb 官方頁面為最終依據。代理只提供排名、片名、年份、評分、投票數及作品連結，不提供海報圖片。</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="./"><span class="brand-mark">C</span><span>CINE<span class="brand-light">SCOPE</span></span></a>
+    <p>為好故事而收藏。A small home for films and series.</p>
+    <div class="footer-bottom"><span>© 2026 CineScope Journal · Ranking Special</span><a href="./">返回雜誌首頁 ↑</a></div>
+  </footer>
+  <div class="rank-toast" id="rankToast" role="status" aria-live="polite"></div>
+</body>
+</html>
