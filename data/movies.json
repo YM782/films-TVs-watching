@@ -1,6 +1,6 @@
 {
   "snapshotDate": "2026-11-23",
-  "notice": "評分為建立網站時查閱的公開頁面快照，並非即時 API 資料；分數及評價人數可能隨平台更新而變動。",
+  "notice": "評分為 2026-11-23 查閱的公開頁面快照，並非即時 API 資料；分數會隨平台更新。未能核實的分數以 — 顯示，不作推測。",
   "movies": [
     {
       "id": "shawshank-1994",
@@ -259,6 +259,1263 @@
         "tomato": "https://www.rottentomatoes.com/tv/chernobyl",
         "imdb": "https://www.imdb.com/title/tt7366338/",
         "douban": ""
+      }
+    },
+    {
+      "id": "twelve-angry-men-1957",
+      "type": "movie",
+      "titleZh": "十二怒漢",
+      "titleEn": "12 Angry Men",
+      "year": 1957,
+      "country": "美國",
+      "runtime": "96 分鐘",
+      "director": "Sidney Lumet",
+      "genres": [
+        "劇情",
+        "法庭"
+      ],
+      "summary": "十二名陪審員必須對一宗謀殺案達成一致裁決；一名陪審員提出合理疑點後，眾人開始重新檢視證據與偏見。",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/b/b5/12_Angry_Men_%281957_film_poster%29.jpg",
+      "posterSource": "https://upload.wikimedia.org/wikipedia/commons/b/b5/12_Angry_Men_%281957_film_poster%29.jpg",
+      "ratings": {
+        "tomato": 100,
+        "popcorn": 97,
+        "imdb": 9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/1000013_12_angry_men",
+        "imdb": "https://www.imdb.com/title/tt0050083/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%8D%81%E4%BA%8C%E6%80%92%E6%BC%A2&cat=1002"
+      }
+    },
+    {
+      "id": "godfather-part-ii-1974",
+      "type": "movie",
+      "titleZh": "教父續集",
+      "titleEn": "The Godfather Part II",
+      "year": 1974,
+      "country": "美國",
+      "runtime": "202 分鐘",
+      "director": "Francis Ford Coppola",
+      "genres": [
+        "犯罪",
+        "劇情"
+      ],
+      "summary": "以雙線敘事交織年輕維托的崛起，以及麥可接掌家族後逐漸失去親情與信任的過程。",
+      "poster": "https://www.originalfilmart.com/cdn/shop/products/godfather_part_2_1974_original_film_art_771596cc-a132-4407-a6a6-e7a9d5c1e03b_5000x.jpg?v=1579671248",
+      "posterSource": "https://www.originalfilmart.com/cdn/shop/products/godfather_part_2_1974_original_film_art_771596cc-a132-4407-a6a6-e7a9d5c1e03b_5000x.jpg?v=1579671248",
+      "ratings": {
+        "tomato": 96,
+        "popcorn": 97,
+        "imdb": 9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/the_godfather_part_ii",
+        "imdb": "https://www.imdb.com/title/tt0071562/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%95%99%E7%88%B6%E7%BA%8C%E9%9B%86&cat=1002"
+      }
+    },
+    {
+      "id": "lotr-return-king-2003",
+      "type": "movie",
+      "titleZh": "魔戒三部曲：王者再臨",
+      "titleEn": "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "country": "紐西蘭／美國",
+      "runtime": "201 分鐘",
+      "director": "Peter Jackson",
+      "genres": [
+        "奇幻",
+        "冒險"
+      ],
+      "summary": "中土世界迎來決戰。佛羅多與山姆深入魔多，亞拉岡則帶領自由人民迎向索倫大軍。",
+      "poster": "https://media.kg-portal.ru/movies/r/returnoftheking/posters/returnoftheking_7.jpg",
+      "posterSource": "https://media.kg-portal.ru/movies/r/returnoftheking/posters/returnoftheking_7.jpg",
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 86,
+        "imdb": 9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/the_lord_of_the_rings_the_return_of_the_king",
+        "imdb": "https://www.imdb.com/title/tt0167260/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%AD%94%E6%88%92%E4%B8%89%E9%83%A8%E6%9B%B2%EF%BC%9A%E7%8E%8B%E8%80%85%E5%86%8D%E8%87%A8&cat=1002"
+      }
+    },
+    {
+      "id": "schindlers-list-1993",
+      "type": "movie",
+      "titleZh": "辛德勒的名單",
+      "titleEn": "Schindler's List",
+      "year": 1993,
+      "country": "美國",
+      "runtime": "195 分鐘",
+      "director": "Steven Spielberg",
+      "genres": [
+        "歷史",
+        "劇情",
+        "戰爭"
+      ],
+      "summary": "二戰期間，商人奧斯卡・辛德勒逐漸意識到納粹暴行的真相，並冒險拯救工廠裡的猶太工人。",
+      "poster": "https://filmartgallery.com/cdn/shop/products/Schindlers-List-Vintage-Movie-Poster-Original_2d9396e4_5000x.jpg?v=1771958425",
+      "posterSource": "https://filmartgallery.com/cdn/shop/products/Schindlers-List-Vintage-Movie-Poster-Original_2d9396e4_5000x.jpg?v=1771958425",
+      "ratings": {
+        "tomato": 98,
+        "popcorn": 97,
+        "imdb": 9,
+        "douban": 9.5
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/schindlers_list",
+        "imdb": "https://www.imdb.com/title/tt0108052/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E8%BE%9B%E5%BE%B7%E5%8B%92%E7%9A%84%E5%90%8D%E5%96%AE&cat=1002"
+      }
+    },
+    {
+      "id": "lotr-fellowship-2001",
+      "type": "movie",
+      "titleZh": "魔戒首部曲：魔戒現身",
+      "titleEn": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "country": "紐西蘭／美國",
+      "runtime": "178 分鐘",
+      "director": "Peter Jackson",
+      "genres": [
+        "奇幻",
+        "冒險"
+      ],
+      "summary": "佛羅多繼承至尊魔戒，與甘道夫、亞拉岡及夥伴組成遠征隊，踏上摧毀魔戒的旅程。",
+      "poster": "https://www.originalfilmart.com/cdn/shop/files/lord_of_the_rings_the_fellowship_of_the_ring_2001_original_film_art_5e072845-b1e1-4e6b-a22d-51bdaa089a58_600x.webp?v=1706820410",
+      "posterSource": "https://www.originalfilmart.com/cdn/shop/files/lord_of_the_rings_the_fellowship_of_the_ring_2001_original_film_art_5e072845-b1e1-4e6b-a22d-51bdaa089a58_600x.webp?v=1706820410",
+      "ratings": {
+        "tomato": 91,
+        "popcorn": 95,
+        "imdb": 8.9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/the_lord_of_the_rings_the_fellowship_of_the_ring",
+        "imdb": "https://www.imdb.com/title/tt0120737/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%AD%94%E6%88%92%E9%A6%96%E9%83%A8%E6%9B%B2%EF%BC%9A%E9%AD%94%E6%88%92%E7%8F%BE%E8%BA%AB&cat=1002"
+      }
+    },
+    {
+      "id": "pulp-fiction-1994",
+      "type": "movie",
+      "titleZh": "危險人物",
+      "titleEn": "Pulp Fiction",
+      "year": 1994,
+      "country": "美國",
+      "runtime": "154 分鐘",
+      "director": "Quentin Tarantino",
+      "genres": [
+        "犯罪",
+        "劇情"
+      ],
+      "summary": "幾組洛杉磯人物的命運透過非線性敘事交錯，黑幫、拳手與小偷在暴力、幽默和偶然之中相遇。",
+      "poster": "https://movieposterhub.com/cdn/shop/files/PulpFictionMiramax_1994RolledU.SOneSheet.jpg?v=1706589911&width=1024",
+      "posterSource": "https://movieposterhub.com/cdn/shop/files/PulpFictionMiramax_1994RolledU.SOneSheet.jpg?v=1706589911&width=1024",
+      "ratings": {
+        "tomato": 92,
+        "popcorn": 96,
+        "imdb": 8.8,
+        "douban": 8.9
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/pulp_fiction",
+        "imdb": "https://www.imdb.com/title/tt0110912/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%8D%B1%E9%9A%AA%E4%BA%BA%E7%89%A9&cat=1002"
+      }
+    },
+    {
+      "id": "forrest-gump-1994",
+      "type": "movie",
+      "titleZh": "阿甘正傳",
+      "titleEn": "Forrest Gump",
+      "year": 1994,
+      "country": "美國",
+      "runtime": "142 分鐘",
+      "director": "Robert Zemeckis",
+      "genres": [
+        "劇情",
+        "愛情"
+      ],
+      "summary": "阿甘以單純而堅定的態度走過美國數十年的重大歷史時刻，也始終惦記著童年摯愛珍妮。",
+      "poster": "https://pics.filmaffinity.com/Forrest_Gump-212765827-large.jpg",
+      "posterSource": "https://pics.filmaffinity.com/Forrest_Gump-212765827-large.jpg",
+      "ratings": {
+        "tomato": 75,
+        "popcorn": 95,
+        "imdb": 8.8,
+        "douban": 9.5
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/forrest_gump",
+        "imdb": "https://www.imdb.com/title/tt0109830/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%98%BF%E7%94%98%E6%AD%A3%E5%82%B3&cat=1002"
+      }
+    },
+    {
+      "id": "fight-club-1999",
+      "type": "movie",
+      "titleZh": "搏擊會",
+      "titleEn": "Fight Club",
+      "year": 1999,
+      "country": "美國",
+      "runtime": "139 分鐘",
+      "director": "David Fincher",
+      "genres": [
+        "劇情",
+        "懸疑"
+      ],
+      "summary": "一名失眠的上班族遇上神秘的泰勒，兩人創立地下搏擊組織，卻逐漸把生活推向失控邊緣。",
+      "poster": "https://www.originalfilmart.com/cdn/shop/files/fight_club_1999_advance_style_A_original_film_art_59c1802c-86a0-4be8-8894-d6fd9e0dde93_5000x.webp?v=1703028197",
+      "posterSource": "https://www.originalfilmart.com/cdn/shop/files/fight_club_1999_advance_style_A_original_film_art_59c1802c-86a0-4be8-8894-d6fd9e0dde93_5000x.webp?v=1703028197",
+      "ratings": {
+        "tomato": 81,
+        "popcorn": 96,
+        "imdb": 8.8,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/fight_club",
+        "imdb": "https://www.imdb.com/title/tt0137523/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%90%8F%E6%93%8A%E6%9C%83&cat=1002"
+      }
+    },
+    {
+      "id": "matrix-1999",
+      "type": "movie",
+      "titleZh": "廿二世紀殺人網絡",
+      "titleEn": "The Matrix",
+      "year": 1999,
+      "country": "美國／澳洲",
+      "runtime": "136 分鐘",
+      "director": "Lana Wachowski、Lilly Wachowski",
+      "genres": [
+        "科幻",
+        "動作"
+      ],
+      "summary": "程式員尼奧發現現實世界可能只是機器建立的模擬系統，並被帶進人類反抗機器的戰爭。",
+      "poster": "https://filmartgallery.com/cdn/shop/files/The-Matrix-Vintage-Movie-Poster-Original_47d8b027.jpg?v=1741771582&width=1200",
+      "posterSource": "https://filmartgallery.com/cdn/shop/files/The-Matrix-Vintage-Movie-Poster-Original_47d8b027.jpg?v=1741771582&width=1200",
+      "ratings": {
+        "tomato": 83,
+        "popcorn": 85,
+        "imdb": 8.7,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/matrix",
+        "imdb": "https://www.imdb.com/title/tt0133093/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%BB%BF%E4%BA%8C%E4%B8%96%E7%B4%80%E6%AE%BA%E4%BA%BA%E7%B6%B2%E7%B5%A1&cat=1002"
+      }
+    },
+    {
+      "id": "goodfellas-1990",
+      "type": "movie",
+      "titleZh": "盜亦有道",
+      "titleEn": "Goodfellas",
+      "year": 1990,
+      "country": "美國",
+      "runtime": "145 分鐘",
+      "director": "Martin Scorsese",
+      "genres": [
+        "犯罪",
+        "傳記",
+        "劇情"
+      ],
+      "summary": "亨利・希爾從街頭小混混一路進入黑手黨世界，親眼見證權力、金錢、忠誠與背叛的代價。",
+      "poster": "https://i.ebayimg.com/images/g/GKQAAOSwDYFfjbMi/s-l1200.jpg",
+      "posterSource": "https://i.ebayimg.com/images/g/GKQAAOSwDYFfjbMi/s-l1200.jpg",
+      "ratings": {
+        "tomato": 93,
+        "popcorn": 97,
+        "imdb": 8.7,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/1032176-goodfellas",
+        "imdb": "https://www.imdb.com/title/tt0099685/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E7%9B%9C%E4%BA%A6%E6%9C%89%E9%81%93&cat=1002"
+      }
+    },
+    {
+      "id": "se7en-1995",
+      "type": "movie",
+      "titleZh": "七宗罪",
+      "titleEn": "Se7en",
+      "year": 1995,
+      "country": "美國",
+      "runtime": "127 分鐘",
+      "director": "David Fincher",
+      "genres": [
+        "犯罪",
+        "懸疑",
+        "驚悚"
+      ],
+      "summary": "兩名刑警追查一名以七宗罪為靈感的連環殺手，案件逐步揭露人性與城市黑暗的一面。",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmI3NmZlNDgtYWE4MC00YTM1LWEzYjItZTUxZTAzMDI4ZTViXkEyXkFqcGc%40._V1_.jpg",
+      "posterSource": "https://m.media-amazon.com/images/M/MV5BMmI3NmZlNDgtYWE4MC00YTM1LWEzYjItZTUxZTAzMDI4ZTViXkEyXkFqcGc%40._V1_.jpg",
+      "ratings": {
+        "tomato": 84,
+        "popcorn": 95,
+        "imdb": 8.6,
+        "douban": 8.8
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/seven",
+        "imdb": "https://www.imdb.com/title/tt0114369/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E4%B8%83%E5%AE%97%E7%BD%AA&cat=1002"
+      }
+    },
+    {
+      "id": "silence-lambs-1991",
+      "type": "movie",
+      "titleZh": "沉默的羔羊",
+      "titleEn": "The Silence of the Lambs",
+      "year": 1991,
+      "country": "美國",
+      "runtime": "118 分鐘",
+      "director": "Jonathan Demme",
+      "genres": [
+        "犯罪",
+        "懸疑",
+        "驚悚"
+      ],
+      "summary": "FBI 見習探員克拉麗斯向被囚禁的精神科醫生漢尼拔・萊克特尋求線索，追捕另一名連環殺手。",
+      "poster": "https://i.pinimg.com/originals/f6/f8/8d/f6f88d0523598e6be46d1c9dd35e3e85.jpg",
+      "posterSource": "https://i.pinimg.com/originals/f6/f8/8d/f6f88d0523598e6be46d1c9dd35e3e85.jpg",
+      "ratings": {
+        "tomato": 95,
+        "popcorn": 95,
+        "imdb": 8.6,
+        "douban": 8.9
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/silence_of_the_lambs",
+        "imdb": "https://www.imdb.com/title/tt0102926/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%B2%89%E9%BB%98%E7%9A%84%E7%BE%94%E7%BE%8A&cat=1002"
+      }
+    },
+    {
+      "id": "saving-private-ryan-1998",
+      "type": "movie",
+      "titleZh": "雷霆救兵",
+      "titleEn": "Saving Private Ryan",
+      "year": 1998,
+      "country": "美國",
+      "runtime": "169 分鐘",
+      "director": "Steven Spielberg",
+      "genres": [
+        "戰爭",
+        "劇情",
+        "歷史"
+      ],
+      "summary": "諾曼第登陸後，一支美軍小隊深入敵後，尋找並帶回三名兄弟已陣亡的傘兵詹姆斯・雷恩。",
+      "poster": "https://artofthemovies.co.uk/cdn/shop/files/saving_private_ryan_cast_style_BM17196_B.jpg?v=1749144772",
+      "posterSource": "https://artofthemovies.co.uk/cdn/shop/files/saving_private_ryan_cast_style_BM17196_B.jpg?v=1749144772",
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 95,
+        "imdb": 8.6,
+        "douban": 9.1
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/saving_private_ryan",
+        "imdb": "https://www.imdb.com/title/tt0120815/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%9B%B7%E9%9C%86%E6%95%91%E5%85%B5&cat=1002"
+      }
+    },
+    {
+      "id": "green-mile-1999",
+      "type": "movie",
+      "titleZh": "綠色奇蹟",
+      "titleEn": "The Green Mile",
+      "year": 1999,
+      "country": "美國",
+      "runtime": "189 分鐘",
+      "director": "Frank Darabont",
+      "genres": [
+        "劇情",
+        "奇幻"
+      ],
+      "summary": "死囚區的獄警遇上一名擁有神奇能力、卻被判死刑的囚犯，開始重新思考正義、善良與奇蹟。",
+      "poster": "https://p3-sdbk2-media.byteimg.com/tos-cn-i-xv4ileqgde/845129d9a8a6446c88a75a3965f1fdeb~tplv-xv4ileqgde-resize-w%3A1440.image",
+      "posterSource": "https://p3-sdbk2-media.byteimg.com/tos-cn-i-xv4ileqgde/845129d9a8a6446c88a75a3965f1fdeb~tplv-xv4ileqgde-resize-w%3A1440.image",
+      "ratings": {
+        "tomato": 78,
+        "popcorn": 94,
+        "imdb": 8.6,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/green_mile",
+        "imdb": "https://www.imdb.com/title/tt0120689/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E7%B6%A0%E8%89%B2%E5%A5%87%E8%B9%9F&cat=1002"
+      }
+    },
+    {
+      "id": "back-to-the-future-1985",
+      "type": "movie",
+      "titleZh": "回到未來",
+      "titleEn": "Back to the Future",
+      "year": 1985,
+      "country": "美國",
+      "runtime": "116 分鐘",
+      "director": "Robert Zemeckis",
+      "genres": [
+        "科幻",
+        "冒險",
+        "喜劇"
+      ],
+      "summary": "少年馬蒂意外乘坐時光車回到父母年輕時代，必須修正歷史，才能讓自己回到原本的年代。",
+      "poster": "https://thedigitalbits.com/media/k2/items/cache/a60f95e6048a6076bc6ca88177633fab_L.jpg",
+      "posterSource": "https://thedigitalbits.com/media/k2/items/cache/a60f95e6048a6076bc6ca88177633fab_L.jpg",
+      "ratings": {
+        "tomato": 93,
+        "popcorn": 99,
+        "imdb": 8.5,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/back_to_the_future",
+        "imdb": "https://www.imdb.com/title/tt0088763/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%9B%9E%E5%88%B0%E6%9C%AA%E4%BE%86&cat=1002"
+      }
+    },
+    {
+      "id": "the-pianist-2002",
+      "type": "movie",
+      "titleZh": "鋼琴戰曲",
+      "titleEn": "The Pianist",
+      "year": 2002,
+      "country": "法國／波蘭／德國／英國",
+      "runtime": "150 分鐘",
+      "director": "Roman Polanski",
+      "genres": [
+        "戰爭",
+        "歷史",
+        "劇情"
+      ],
+      "summary": "波蘭猶太鋼琴家斯皮爾曼在華沙被佔領期間努力生存，音樂成為他在戰火中維繫尊嚴與希望的力量。",
+      "poster": "https://cdn.posteritati.com/posters/000/000/065/764/the-pianist-md-web.jpg",
+      "posterSource": "https://cdn.posteritati.com/posters/000/000/065/764/the-pianist-md-web.jpg",
+      "ratings": {
+        "tomato": 95,
+        "popcorn": 96,
+        "imdb": 8.5,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/the_pianist_2002",
+        "imdb": "https://www.imdb.com/title/tt0253474/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%8B%BC%E7%90%B4%E6%88%B0%E6%9B%B2&cat=1002"
+      }
+    },
+    {
+      "id": "gladiator-2000",
+      "type": "movie",
+      "titleZh": "帝國驕雄",
+      "titleEn": "Gladiator",
+      "year": 2000,
+      "country": "美國／英國",
+      "runtime": "155 分鐘",
+      "director": "Ridley Scott",
+      "genres": [
+        "動作",
+        "歷史",
+        "劇情"
+      ],
+      "summary": "羅馬將軍馬克西蒙斯遭背叛後淪為角鬥士，決心在競技場中尋回尊嚴並向帝國復仇。",
+      "poster": "https://filmartgallery.com/cdn/shop/files/Gladiator-Vintage-Movie-Poster-Original.jpg?v=1738906837",
+      "posterSource": "https://filmartgallery.com/cdn/shop/files/Gladiator-Vintage-Movie-Poster-Original.jpg?v=1738906837",
+      "ratings": {
+        "tomato": 80,
+        "popcorn": 87,
+        "imdb": 8.5,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/gladiator",
+        "imdb": "https://www.imdb.com/title/tt0172495/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%B8%9D%E5%9C%8B%E9%A9%95%E9%9B%84&cat=1002"
+      }
+    },
+    {
+      "id": "whiplash-2014",
+      "type": "movie",
+      "titleZh": "鼓動真我",
+      "titleEn": "Whiplash",
+      "year": 2014,
+      "country": "美國",
+      "runtime": "106 分鐘",
+      "director": "Damien Chazelle",
+      "genres": [
+        "劇情",
+        "音樂"
+      ],
+      "summary": "年輕爵士鼓手進入頂尖音樂學院，遇上以嚴苛著稱的導師，在追求完美的過程中不斷挑戰身心極限。",
+      "poster": "https://www.vintagemovieposters.co.uk/wp-content/uploads/2021/05/IMG_2086-scaled.jpeg",
+      "posterSource": "https://www.vintagemovieposters.co.uk/wp-content/uploads/2021/05/IMG_2086-scaled.jpeg",
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 94,
+        "imdb": 8.5,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/m/whiplash_2014",
+        "imdb": "https://www.imdb.com/title/tt2582802/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%BC%93%E5%8B%95%E7%9C%9F%E6%88%91&cat=1002"
+      }
+    },
+    {
+      "id": "band-of-brothers-2001",
+      "type": "tv",
+      "titleZh": "兄弟連",
+      "titleEn": "Band of Brothers",
+      "year": 2001,
+      "country": "美國／英國",
+      "runtime": "1 季 · 10 集",
+      "director": "Tom Hanks、Steven Spielberg",
+      "genres": [
+        "戰爭",
+        "歷史",
+        "劇情"
+      ],
+      "summary": "以美軍第 101 空降師 E 連為主線，從訓練、諾曼第登陸到歐洲戰場，呈現士兵在戰爭中的勇氣與情誼。",
+      "poster": "https://visualprint-store.com/cdn/shop/files/edz9itP3zaoC36gr9IZIdMLqt3G.jpg?v=1684258393",
+      "posterSource": "https://visualprint-store.com/cdn/shop/files/edz9itP3zaoC36gr9IZIdMLqt3G.jpg?v=1684258393",
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 97,
+        "imdb": 9.4,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/band_of_brothers",
+        "imdb": "https://www.imdb.com/title/tt0185906/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%85%84%E5%BC%9F%E9%80%A3&cat=1002"
+      }
+    },
+    {
+      "id": "the-wire-2002",
+      "type": "tv",
+      "titleZh": "火線重案組",
+      "titleEn": "The Wire",
+      "year": 2002,
+      "country": "美國",
+      "runtime": "5 季 · 60 集",
+      "director": "David Simon",
+      "genres": [
+        "犯罪",
+        "劇情"
+      ],
+      "summary": "透過巴爾的摩警察、毒販、政府、學校與媒體等不同群體，描寫城市制度如何影響普通人的生活。",
+      "poster": "https://static.hbo.com/2023-10/the-wire-ka-logo-1080_0.jpg",
+      "posterSource": "https://static.hbo.com/2023-10/the-wire-ka-logo-1080_0.jpg",
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 96,
+        "imdb": 9.3,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/the_wire",
+        "imdb": "https://www.imdb.com/title/tt0306414/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E7%81%AB%E7%B7%9A%E9%87%8D%E6%A1%88%E7%B5%84&cat=1002"
+      }
+    },
+    {
+      "id": "sopranos-1999",
+      "type": "tv",
+      "titleZh": "黑道家族",
+      "titleEn": "The Sopranos",
+      "year": 1999,
+      "country": "美國",
+      "runtime": "6 季 · 86 集",
+      "director": "David Chase",
+      "genres": [
+        "犯罪",
+        "劇情"
+      ],
+      "summary": "黑幫首領東尼・索普拉諾在家庭、犯罪組織與心理治療之間掙扎，呈現權力、焦慮與家庭關係。",
+      "poster": "https://moviepostermexico.com/cdn/shop/products/2022_3_23_png_2000x3000_89b2e27f-5d18-48ab-8737-5aa3b2cb3064_1024x1024%402x.jpg?v=1658160291",
+      "posterSource": "https://moviepostermexico.com/cdn/shop/products/2022_3_23_png_2000x3000_89b2e27f-5d18-48ab-8737-5aa3b2cb3064_1024x1024%402x.jpg?v=1658160291",
+      "ratings": {
+        "tomato": 92,
+        "popcorn": 96,
+        "imdb": 9.2,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/the_sopranos",
+        "imdb": "https://www.imdb.com/title/tt0141842/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%BB%91%E9%81%93%E5%AE%B6%E6%97%8F&cat=1002"
+      }
+    },
+    {
+      "id": "game-of-thrones-2011",
+      "type": "tv",
+      "titleZh": "權力遊戲",
+      "titleEn": "Game of Thrones",
+      "year": 2011,
+      "country": "美國／英國",
+      "runtime": "8 季 · 73 集",
+      "director": "David Benioff、D. B. Weiss",
+      "genres": [
+        "奇幻",
+        "劇情",
+        "冒險"
+      ],
+      "summary": "維斯特洛大陸的家族、王國與勢力為鐵王座展開鬥爭，權力、忠誠與生存成為每個角色的考驗。",
+      "poster": "https://web.static.nowtv.com/images/NOWTV_2026/Design_Assets/Ents%20%26%20Max/Bespoke%20pages/SEO%20Poster/GameOfThrones_poster.jpg",
+      "posterSource": "https://web.static.nowtv.com/images/NOWTV_2026/Design_Assets/Ents%20%26%20Max/Bespoke%20pages/SEO%20Poster/GameOfThrones_poster.jpg",
+      "ratings": {
+        "tomato": 89,
+        "popcorn": 85,
+        "imdb": 9.2,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/game_of_thrones",
+        "imdb": "https://www.imdb.com/title/tt0944947/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%AC%8A%E5%8A%9B%E9%81%8A%E6%88%B2&cat=1002"
+      }
+    },
+    {
+      "id": "sherlock-2010",
+      "type": "tv",
+      "titleZh": "新世紀福爾摩斯",
+      "titleEn": "Sherlock",
+      "year": 2010,
+      "country": "英國",
+      "runtime": "4 系列 · 13 集",
+      "director": "Mark Gatiss、Steven Moffat",
+      "genres": [
+        "犯罪",
+        "懸疑",
+        "劇情"
+      ],
+      "summary": "把福爾摩斯故事搬到現代倫敦，天才偵探與退伍軍醫華生以觀察、推理和科技破解奇案。",
+      "poster": "https://cdn1.naekranie.pl/media/cache/amp/2014/12/Sherlock-poster.jpg",
+      "posterSource": "https://cdn1.naekranie.pl/media/cache/amp/2014/12/Sherlock-poster.jpg",
+      "ratings": {
+        "tomato": 78,
+        "popcorn": 83,
+        "imdb": 9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/sherlock",
+        "imdb": "https://www.imdb.com/title/tt1475582/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%96%B0%E4%B8%96%E7%B4%80%E7%A6%8F%E7%88%BE%E6%91%A9%E6%96%AF&cat=1002"
+      }
+    },
+    {
+      "id": "better-call-saul-2015",
+      "type": "tv",
+      "titleZh": "風騷律師",
+      "titleEn": "Better Call Saul",
+      "year": 2015,
+      "country": "美國",
+      "runtime": "6 季 · 63 集",
+      "director": "Vince Gilligan、Peter Gould",
+      "genres": [
+        "犯罪",
+        "劇情"
+      ],
+      "summary": "小律師吉米・麥吉爾逐漸轉變為索爾・古德曼，描寫他在法律、道德、野心與人際關係間的選擇。",
+      "poster": "https://www.impawards.com/tv/posters/better_call_saul_ver5_xlg.jpg",
+      "posterSource": "https://www.impawards.com/tv/posters/better_call_saul_ver5_xlg.jpg",
+      "ratings": {
+        "tomato": 98,
+        "popcorn": 96,
+        "imdb": 9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/better_call_saul",
+        "imdb": "https://www.imdb.com/title/tt3032476/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%A2%A8%E9%A8%B7%E5%BE%8B%E5%B8%AB&cat=1002"
+      }
+    },
+    {
+      "id": "friends-1994",
+      "type": "tv",
+      "titleZh": "老友記",
+      "titleEn": "Friends",
+      "year": 1994,
+      "country": "美國",
+      "runtime": "10 季 · 236 集",
+      "director": "David Crane、Marta Kauffman",
+      "genres": [
+        "喜劇",
+        "愛情"
+      ],
+      "summary": "六位住在紐約的好友一起經歷工作、戀愛、家庭與成長，以日常生活和友情構成經典情境喜劇。",
+      "poster": "https://i.ebayimg.com/images/g/6pUAAOSwAdJlqPqg/s-l1200.jpg",
+      "posterSource": "https://i.ebayimg.com/images/g/6pUAAOSwAdJlqPqg/s-l1200.jpg",
+      "ratings": {
+        "tomato": 78,
+        "popcorn": 93,
+        "imdb": 8.8,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/friends",
+        "imdb": "https://www.imdb.com/title/tt0108778/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E8%80%81%E5%8F%8B%E8%A8%98&cat=1002"
+      }
+    },
+    {
+      "id": "the-office-us-2005",
+      "type": "tv",
+      "titleZh": "辦公室",
+      "titleEn": "The Office (U.S.)",
+      "year": 2005,
+      "country": "美國",
+      "runtime": "9 季 · 201 集",
+      "director": "Greg Daniels",
+      "genres": [
+        "喜劇",
+        "職場"
+      ],
+      "summary": "以偽紀錄片方式呈現紙業公司辦公室日常，透過主管、同事與職場關係帶出荒誕又熟悉的幽默。",
+      "poster": "https://i.ebayimg.com/images/g/xpsAAOSwYL9lqP2v/s-l1200.jpg",
+      "posterSource": "https://i.ebayimg.com/images/g/xpsAAOSwYL9lqP2v/s-l1200.jpg",
+      "ratings": {
+        "tomato": 81,
+        "popcorn": 89,
+        "imdb": 9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/the_office",
+        "imdb": "https://www.imdb.com/title/tt0386676/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E8%BE%A6%E5%85%AC%E5%AE%A4&cat=1002"
+      }
+    },
+    {
+      "id": "dark-2017",
+      "type": "tv",
+      "titleZh": "闇",
+      "titleEn": "Dark",
+      "year": 2017,
+      "country": "德國",
+      "runtime": "3 季 · 26 集",
+      "director": "Baran bo Odar、Jantje Friese",
+      "genres": [
+        "科幻",
+        "懸疑",
+        "劇情"
+      ],
+      "summary": "德國小鎮兒童失蹤事件揭開四個家庭跨越數十年的秘密，時間、命運與因果逐漸交織。",
+      "poster": "https://cloudfront-eu-central-1.images.arcpublishing.com/madsack/ZCJ2CKQCVAJF32DGCW4DQPLRDI.jpg",
+      "posterSource": "https://cloudfront-eu-central-1.images.arcpublishing.com/madsack/ZCJ2CKQCVAJF32DGCW4DQPLRDI.jpg",
+      "ratings": {
+        "tomato": 95,
+        "popcorn": 94,
+        "imdb": 8.7,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/dark",
+        "imdb": "https://www.imdb.com/title/tt5753856/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%97%87&cat=1002"
+      }
+    },
+    {
+      "id": "fargo-2014",
+      "type": "tv",
+      "titleZh": "冰血暴",
+      "titleEn": "Fargo",
+      "year": 2014,
+      "country": "美國",
+      "runtime": "5 季 · 51 集",
+      "director": "Noah Hawley",
+      "genres": [
+        "犯罪",
+        "黑色幽默",
+        "劇情"
+      ],
+      "summary": "受同名電影啟發的犯罪選集劇，每季以不同人物與案件描繪美國中西部小鎮的荒誕暴力。",
+      "poster": "https://image.tmdb.org/t/p/original/7nozWatLOcywwyW79BZ42lAahEB.jpg",
+      "posterSource": "https://image.tmdb.org/t/p/original/7nozWatLOcywwyW79BZ42lAahEB.jpg",
+      "ratings": {
+        "tomato": 93,
+        "popcorn": 85,
+        "imdb": 8.8,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/fargo",
+        "imdb": "https://www.imdb.com/title/tt2802850/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%86%B0%E8%A1%80%E6%9A%B4&cat=1002"
+      }
+    },
+    {
+      "id": "succession-2018",
+      "type": "tv",
+      "titleZh": "繼承之戰",
+      "titleEn": "Succession",
+      "year": 2018,
+      "country": "美國",
+      "runtime": "4 季 · 39 集",
+      "director": "Jesse Armstrong",
+      "genres": [
+        "劇情",
+        "商戰"
+      ],
+      "summary": "媒體帝國創辦人年老後，子女為了控制權與父親的認可展開權力角力，揭露家族與企業的複雜關係。",
+      "poster": "https://images.tv.osn.com/MYXB/942b1995-ebd8-498d-90f2-9df98270a41a.jpg",
+      "posterSource": "https://images.tv.osn.com/MYXB/942b1995-ebd8-498d-90f2-9df98270a41a.jpg",
+      "ratings": {
+        "tomato": 95,
+        "popcorn": 88,
+        "imdb": 8.8,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/succession",
+        "imdb": "https://www.imdb.com/title/tt7660850/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E7%B9%BC%E6%89%BF%E4%B9%8B%E6%88%B0&cat=1002"
+      }
+    },
+    {
+      "id": "stranger-things-2016",
+      "type": "tv",
+      "titleZh": "怪奇物語",
+      "titleEn": "Stranger Things",
+      "year": 2016,
+      "country": "美國",
+      "runtime": "5 季 · 42 集",
+      "director": "The Duffer Brothers",
+      "genres": [
+        "科幻",
+        "懸疑",
+        "恐怖"
+      ],
+      "summary": "美國小鎮一名男孩失蹤後，朋友們發現秘密實驗、超自然力量與另一個黑暗世界的存在。",
+      "poster": "https://i.ebayimg.com/00/s/MTYwMFgxMDgw/z/iL0AAOSwf6xkwoWW/%24_57.JPG?set_id=8800005007",
+      "posterSource": "https://i.ebayimg.com/00/s/MTYwMFgxMDgw/z/iL0AAOSwf6xkwoWW/%24_57.JPG?set_id=8800005007",
+      "ratings": {
+        "tomato": 90,
+        "popcorn": 83,
+        "imdb": 8.6,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/stranger_things",
+        "imdb": "https://www.imdb.com/title/tt4574334/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%80%AA%E5%A5%87%E7%89%A9%E8%AA%9E&cat=1002"
+      }
+    },
+    {
+      "id": "mad-men-2007",
+      "type": "tv",
+      "titleZh": "廣告狂人",
+      "titleEn": "Mad Men",
+      "year": 2007,
+      "country": "美國",
+      "runtime": "7 季 · 92 集",
+      "director": "Matthew Weiner",
+      "genres": [
+        "劇情",
+        "職場"
+      ],
+      "summary": "1960 年代紐約廣告業的創意總監在職場競爭、家庭與個人身份之間尋找位置。",
+      "poster": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b5f49a145992393.62a8c33d00655.jpg",
+      "posterSource": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b5f49a145992393.62a8c33d00655.jpg",
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 95,
+        "imdb": 8.7,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/mad_men",
+        "imdb": "https://www.imdb.com/title/tt0804503/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%BB%A3%E5%91%8A%E7%8B%82%E4%BA%BA&cat=1002"
+      }
+    },
+    {
+      "id": "peaky-blinders-2013",
+      "type": "tv",
+      "titleZh": "浴血黑幫",
+      "titleEn": "Peaky Blinders",
+      "year": 2013,
+      "country": "英國",
+      "runtime": "6 季 · 36 集",
+      "director": "Steven Knight",
+      "genres": [
+        "犯罪",
+        "歷史",
+        "劇情"
+      ],
+      "summary": "第一次世界大戰後，伯明翰謝爾比家族以幫派生意起家，並試圖把勢力擴展到政治與商業世界。",
+      "poster": "https://resize-image.vocus.cc/resize?compression=6&norotation=true&sign=7tTjejnY6Ac9Mil4YBTt9mwQmL1RGJkzhq7qyn--fXY&url=https%3A%2F%2Fimages.vocus.cc%2Fbf202be1-9996-4147-bb33-e0f4c2e47383.png&width=618",
+      "posterSource": "https://resize-image.vocus.cc/resize?compression=6&norotation=true&sign=7tTjejnY6Ac9Mil4YBTt9mwQmL1RGJkzhq7qyn--fXY&url=https%3A%2F%2Fimages.vocus.cc%2Fbf202be1-9996-4147-bb33-e0f4c2e47383.png&width=618",
+      "ratings": {
+        "tomato": 93,
+        "popcorn": 94,
+        "imdb": 8.7,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/peaky_blinders",
+        "imdb": "https://www.imdb.com/title/tt2442560/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%B5%B4%E8%A1%80%E9%BB%91%E5%B9%AB&cat=1002"
+      }
+    },
+    {
+      "id": "black-mirror-2011",
+      "type": "tv",
+      "titleZh": "黑鏡",
+      "titleEn": "Black Mirror",
+      "year": 2011,
+      "country": "英國",
+      "runtime": "7 季 · 單元劇",
+      "director": "Charlie Brooker",
+      "genres": [
+        "科幻",
+        "懸疑",
+        "劇情"
+      ],
+      "summary": "每集以獨立故事探討科技、媒體與人性的陰暗面，呈現近未來社會可能出現的倫理困境。",
+      "poster": "https://media.senscritique.com/media/000020557938/source_big/black_mirror.jpg",
+      "posterSource": "https://media.senscritique.com/media/000020557938/source_big/black_mirror.jpg",
+      "ratings": {
+        "tomato": 83,
+        "popcorn": 80,
+        "imdb": 8.7,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/black_mirror",
+        "imdb": "https://www.imdb.com/title/tt2085059/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%BB%91%E9%8F%A1&cat=1002"
+      }
+    },
+    {
+      "id": "fleabag-2016",
+      "type": "tv",
+      "titleZh": "倫敦生活",
+      "titleEn": "Fleabag",
+      "year": 2016,
+      "country": "英國",
+      "runtime": "2 季 · 12 集",
+      "director": "Phoebe Waller-Bridge",
+      "genres": [
+        "喜劇",
+        "劇情"
+      ],
+      "summary": "一名住在倫敦的年輕女性以尖銳幽默面對親情、愛情、失落與自己的矛盾。",
+      "poster": "https://www.impawards.com/tv/posters/fleabag_xlg.jpg",
+      "posterSource": "https://www.impawards.com/tv/posters/fleabag_xlg.jpg",
+      "ratings": {
+        "tomato": 100,
+        "popcorn": 92,
+        "imdb": 8.7,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/fleabag",
+        "imdb": "https://www.imdb.com/title/tt5687612/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%80%AB%E6%95%A6%E7%94%9F%E6%B4%BB&cat=1002"
+      }
+    },
+    {
+      "id": "severance-2022",
+      "type": "tv",
+      "titleZh": "人生切割術",
+      "titleEn": "Severance",
+      "year": 2022,
+      "country": "美國",
+      "runtime": "2 季",
+      "director": "Dan Erickson",
+      "genres": [
+        "科幻",
+        "懸疑",
+        "劇情"
+      ],
+      "summary": "一群員工接受記憶分割手術，工作時與私人生活的記憶完全隔離，卻逐漸發現公司隱藏的秘密。",
+      "poster": "https://www.dolby.com/globalassets/movies--tv-dolby-cinema/p21271538_b_v12_ap-2.jpg",
+      "posterSource": "https://www.dolby.com/globalassets/movies--tv-dolby-cinema/p21271538_b_v12_ap-2.jpg",
+      "ratings": {
+        "tomato": 95,
+        "popcorn": 80,
+        "imdb": 8.6,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/severance",
+        "imdb": "https://www.imdb.com/title/tt11280740/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E4%BA%BA%E7%94%9F%E5%88%87%E5%89%B2%E8%A1%93&cat=1002"
+      }
+    },
+    {
+      "id": "the-crown-2016",
+      "type": "tv",
+      "titleZh": "王冠",
+      "titleEn": "The Crown",
+      "year": 2016,
+      "country": "英國",
+      "runtime": "6 季 · 60 集",
+      "director": "Peter Morgan",
+      "genres": [
+        "歷史",
+        "劇情"
+      ],
+      "summary": "以伊莉莎白二世的統治年代為背景，呈現英國王室、政治制度與私人生活之間的衝突。",
+      "poster": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak%3D/v3/t/assets/p13398828_b_v8_aa.jpg",
+      "posterSource": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak%3D/v3/t/assets/p13398828_b_v8_aa.jpg",
+      "ratings": {
+        "tomato": 81,
+        "popcorn": 92,
+        "imdb": 8.6,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/the_crown",
+        "imdb": "https://www.imdb.com/title/tt4786824/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E7%8E%8B%E5%86%A0&cat=1002"
+      }
+    },
+    {
+      "id": "true-detective-2014",
+      "type": "tv",
+      "titleZh": "無間警探",
+      "titleEn": "True Detective",
+      "year": 2014,
+      "country": "美國",
+      "runtime": "4 季 · 30 集",
+      "director": "Nic Pizzolatto",
+      "genres": [
+        "犯罪",
+        "懸疑",
+        "劇情"
+      ],
+      "summary": "每季聚焦不同警探與案件，調查過程逐步揭開人物的私人秘密、創傷與制度問題。",
+      "poster": "https://image.tmdb.org/t/p/original/qYMnLtvqMJ3MRi4capFH4lxencs.jpg",
+      "posterSource": "https://image.tmdb.org/t/p/original/qYMnLtvqMJ3MRi4capFH4lxencs.jpg",
+      "ratings": {
+        "tomato": 78,
+        "popcorn": 60,
+        "imdb": 8.8,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/true_detective",
+        "imdb": "https://www.imdb.com/title/tt2356777/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E7%84%A1%E9%96%93%E8%AD%A6%E6%8E%A2&cat=1002"
+      }
+    },
+    {
+      "id": "the-last-of-us-2023",
+      "type": "tv",
+      "titleZh": "最後生還者",
+      "titleEn": "The Last of Us",
+      "year": 2023,
+      "country": "美國",
+      "runtime": "2 季 · 16 集",
+      "director": "Craig Mazin、Neil Druckmann",
+      "genres": [
+        "科幻",
+        "冒險",
+        "劇情"
+      ],
+      "summary": "文明崩壞二十年後，倖存者喬爾受託護送少女艾莉穿越危險地區，兩人在旅程中建立起深厚的關係。",
+      "poster": "https://static.wikia.nocookie.net/thelastofus/images/3/37/The_Last_of_Us_Official_Key_Art.jpg/revision/latest/scale-to-width-down/1200?cb=20230220034629",
+      "posterSource": "https://static.wikia.nocookie.net/thelastofus/images/3/37/The_Last_of_Us_Official_Key_Art.jpg/revision/latest/scale-to-width-down/1200?cb=20230220034629",
+      "ratings": {
+        "tomato": 94,
+        "popcorn": 62,
+        "imdb": 8.4,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/the_last_of_us",
+        "imdb": "https://www.imdb.com/title/tt3581920/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%9C%80%E5%BE%8C%E7%94%9F%E9%82%84%E8%80%85&cat=1002"
+      }
+    },
+    {
+      "id": "the-bear-2022",
+      "type": "tv",
+      "titleZh": "大熊餐廳",
+      "titleEn": "The Bear",
+      "year": 2022,
+      "country": "美國",
+      "runtime": "5 季",
+      "director": "Christopher Storer",
+      "genres": [
+        "劇情",
+        "喜劇",
+        "職場"
+      ],
+      "summary": "年輕主廚回到芝加哥接手家族三文治店，與廚房團隊在高壓工作、家庭問題和經營困境中努力求生。",
+      "poster": "https://image.tmdb.org/t/p/original/9kwgN5FiJqQJ6GKhaLMNRakYzeG.jpg",
+      "posterSource": "https://image.tmdb.org/t/p/original/9kwgN5FiJqQJ6GKhaLMNRakYzeG.jpg",
+      "ratings": {
+        "tomato": 98,
+        "popcorn": null,
+        "imdb": 8.5,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/the_bear",
+        "imdb": "https://www.imdb.com/title/tt14452776/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%A4%A7%E7%86%8A%E9%A4%90%E5%BB%B3&cat=1002"
+      }
+    },
+    {
+      "id": "arcane-2021",
+      "type": "tv",
+      "titleZh": "奧術",
+      "titleEn": "Arcane: League of Legends",
+      "year": 2021,
+      "country": "美國／法國",
+      "runtime": "2 季 · 18 集",
+      "director": "Christian Linke、Alex Yee",
+      "genres": [
+        "動畫",
+        "奇幻",
+        "動作"
+      ],
+      "summary": "在富裕的皮爾托福與地下城祖安之間，兩姊妹與多位角色被捲入科技、階級和政治衝突。",
+      "poster": "https://www.ungeek.ph/wp-content/uploads/2021/11/248446032_606748040743570_6417536594943622077_n.jpg",
+      "posterSource": "https://www.ungeek.ph/wp-content/uploads/2021/11/248446032_606748040743570_6417536594943622077_n.jpg",
+      "ratings": {
+        "tomato": 100,
+        "popcorn": 87,
+        "imdb": 9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/arcane_league_of_legends",
+        "imdb": "https://www.imdb.com/title/tt11126994/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%A5%A7%E8%A1%93&cat=1002"
+      }
+    },
+    {
+      "id": "shogun-2024",
+      "type": "tv",
+      "titleZh": "幕府將軍",
+      "titleEn": "Shōgun",
+      "year": 2024,
+      "country": "美國／日本",
+      "runtime": "1 季 · 10 集",
+      "director": "Rachel Kondo、Justin Marks",
+      "genres": [
+        "歷史",
+        "戰爭",
+        "劇情"
+      ],
+      "summary": "1600 年的日本，領主吉井虎永在政治敵對勢力包圍下求生，並與意外漂流而來的歐洲航海家相遇。",
+      "poster": "https://pics.filmaffinity.com/Shaogun_Serie_de_TV-329020163-large.jpg",
+      "posterSource": "https://pics.filmaffinity.com/Shaogun_Serie_de_TV-329020163-large.jpg",
+      "ratings": {
+        "tomato": 99,
+        "popcorn": 85,
+        "imdb": 8.6,
+        "douban": null
+      },
+      "links": {
+        "tomato": "https://www.rottentomatoes.com/tv/shogun_2024",
+        "imdb": "https://www.imdb.com/title/tt2788316/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E5%B9%95%E5%BA%9C%E5%B0%87%E8%BB%8D&cat=1002"
+      }
+    },
+    {
+      "id": "attack-on-titan-2013",
+      "type": "tv",
+      "titleZh": "進擊的巨人",
+      "titleEn": "Attack on Titan",
+      "year": 2013,
+      "country": "日本",
+      "runtime": "4 季 · 87 集",
+      "director": "荒木哲郎、林祐一郎",
+      "genres": [
+        "動畫",
+        "動作",
+        "奇幻"
+      ],
+      "summary": "人類躲在高牆之內抵禦巨人，少年艾連立志加入調查兵團，逐步揭開世界與巨人的真相。",
+      "poster": "https://image.tmdb.org/t/p/original/hBM6T4WT8cbPDYgz9bMFBRQx9AJ.jpg",
+      "posterSource": "https://image.tmdb.org/t/p/original/hBM6T4WT8cbPDYgz9bMFBRQx9AJ.jpg",
+      "ratings": {
+        "tomato": null,
+        "popcorn": null,
+        "imdb": 9.1,
+        "douban": null
+      },
+      "links": {
+        "tomato": "",
+        "imdb": "https://www.imdb.com/title/tt2560140/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%80%B2%E6%93%8A%E7%9A%84%E5%B7%A8%E4%BA%BA&cat=1002"
+      }
+    },
+    {
+      "id": "fmab-2009",
+      "type": "tv",
+      "titleZh": "鋼之鍊金術師 FULLMETAL ALCHEMIST",
+      "titleEn": "Fullmetal Alchemist: Brotherhood",
+      "year": 2009,
+      "country": "日本",
+      "runtime": "1 季 · 64 集",
+      "director": "入江泰浩",
+      "genres": [
+        "動畫",
+        "冒險",
+        "奇幻"
+      ],
+      "summary": "艾力克兄弟因禁忌鍊成失去身體的一部分，為尋回原狀踏上尋找賢者之石的旅程。",
+      "poster": "https://image.tmdb.org/t/p/original/dzSALlMy3Mss6kPMjvf4Sl4pAtR.jpg",
+      "posterSource": "https://image.tmdb.org/t/p/original/dzSALlMy3Mss6kPMjvf4Sl4pAtR.jpg",
+      "ratings": {
+        "tomato": null,
+        "popcorn": null,
+        "imdb": 9.1,
+        "douban": null
+      },
+      "links": {
+        "tomato": "",
+        "imdb": "https://www.imdb.com/title/tt1355642/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E9%8B%BC%E4%B9%8B%E9%8D%8A%E9%87%91%E8%A1%93%E5%B8%AB%20FULLMETAL%20ALCHEMIST&cat=1002"
+      }
+    },
+    {
+      "id": "death-note-2006",
+      "type": "tv",
+      "titleZh": "死亡筆記",
+      "titleEn": "Death Note",
+      "year": 2006,
+      "country": "日本",
+      "runtime": "1 季 · 37 集",
+      "director": "荒木哲郎",
+      "genres": [
+        "動畫",
+        "懸疑",
+        "犯罪"
+      ],
+      "summary": "高中生夜神月拾獲能殺死名字被寫下之人的死亡筆記，與天才偵探 L 展開一場心理攻防戰。",
+      "poster": "https://image.tmdb.org/t/p/original/o6rz8BTCl2kjQtyNBH3KddRcu7T.jpg",
+      "posterSource": "https://image.tmdb.org/t/p/original/o6rz8BTCl2kjQtyNBH3KddRcu7T.jpg",
+      "ratings": {
+        "tomato": null,
+        "popcorn": null,
+        "imdb": 8.9,
+        "douban": null
+      },
+      "links": {
+        "tomato": "",
+        "imdb": "https://www.imdb.com/title/tt0877057/",
+        "douban": "https://search.douban.com/movie/subject_search?search_text=%E6%AD%BB%E4%BA%A1%E7%AD%86%E8%A8%98&cat=1002"
       }
     }
   ]
