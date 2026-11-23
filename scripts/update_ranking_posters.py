@@ -112,7 +112,7 @@ def find_by_title(item: dict, token: str, kind: str) -> dict | None:
     def score(candidate: dict) -> tuple[float, int]:
         candidate_title = candidate.get("title") if kind == "movie" else candidate.get("name")
         similarity = SequenceMatcher(None, wanted, normalize(str(candidate_title or ""))).ratio()
-        date = str(candidate.get("release_date") if kind == "movie" else candidate.get("first_air_date") or "")
+        date = str((candidate.get("release_date") if kind == "movie" else candidate.get("first_air_date")) or "")
         candidate_year = date[:4]
         year_penalty = 0 if not year or candidate_year == year else 1
         return similarity, -year_penalty
