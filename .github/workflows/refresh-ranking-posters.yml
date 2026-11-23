@@ -28,7 +28,13 @@ jobs:
       - name: Match IMDb Top 100 with TMDb posters
         env:
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
-        run: python scripts/update_ranking_posters.py
+        run: |
+          if [ -z "${TMDB_READ_ACCESS_TOKEN:-}" ]; then
+            echo "::notice::TMDB_READ_ACCESS_TOKEN is not configured; poster refresh was skipped."
+            echo "Add the TMDB_READ_ACCESS_TOKEN repository secret, then run this workflow again." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          python scripts/update_ranking_posters.py
 
       - name: Commit poster manifest
         run: |
